@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #01010F;
+    --text: #FDFDFF;
+    --blue: #6F86EB;
+    --yellow: #F4E36E;
+    --pink: #F0B1BB;
+    --green: #65B27B;
+    --primary: var(--blue);
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: local('Tusker Grotesk 4600 Semibold'), local('Tusker-Grotesk-4600-Semibold'),
+        url('../assets/fonts/TuskerGrotesk-4600Semibold.woff2') format('woff2'),
+        url('../assets/fonts/TuskerGrotesk-4600Semibold.woff') format('woff'),
+        url('../assets/fonts/TuskerGrotesk-4600Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald-Regular.woff') format('woff'),
+        url('../assets/fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('Bebas-Neue-Regular'),
+        url('../assets/fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../assets/fonts/BebasNeueRegular.woff') format('woff'),
+        url('../assets/fonts/BebasNeueRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Oswald', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Tusker Grotesk', sans-serif;
+}

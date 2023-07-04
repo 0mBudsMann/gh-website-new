@@ -1,0 +1,230 @@
+main {
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo{
+    position: fixed;
+    z-index: 200000000;
+    svg{
+        height: 100%;
+        width: fit-content;
+        path{
+            stroke-width: 4;
+        }
+    }
+}
+
+.theme-switch{
+    z-index: 200000000;
+    position: relative;
+    display: block;
+    width: 144px;
+    height: 60px;
+    cursor: pointer;
+
+    input{
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked + .slider{
+            background-color: #01010F;
+
+            &::before{
+                content: url(../assets/icons/moon.svg);
+                background-color: #91919F;
+                left: calc(100% - 4px);
+                transform: translateX(-100%);
+            }
+
+            .dark{
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                opacity: 1;
+            }
+
+            .light{
+                top: 150%;
+                right: 20px;
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+        }
+    }
+
+    .slider{
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: .4s;
+        transition: .4s;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+        outline: 2px solid var(--text);
+        border-radius: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .dark{
+            position: absolute;
+            font-family: 'Bebas Neue';
+            padding-top: 8px;
+            font-size: 32px;
+            line-height: 32px;
+            top: 150%;
+            left: 20px;
+            transform: translateY(-50%);
+            -webkit-transition: .4s;
+            transition: .4s;
+            opacity: 0;
+            color: #fdfdff;
+        }
+
+        .light{
+            position: absolute;
+            font-family: 'Bebas Neue';
+            padding-top: 8px;
+            font-size: 32px;
+            line-height: 32px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: var(--bg);
+            -webkit-transition: .4s;
+            transition: .4s;
+            opacity: 1;
+        }
+        &::before{
+            position: absolute;
+            content: url(../assets/icons/sun.svg);
+            height: 52px;
+            width: 52px;
+            left: 4px;
+            top: 4px;
+            padding: 10px;
+            background-color: var(--text);
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .theme-switch {
+        width: 96px;
+        height: 40px;
+
+        .slider {
+
+            .dark {
+                font-size: 24px;
+                line-height: 24px;
+                padding-top: 8px;
+                left: 10px !important;
+            }
+            
+            .light {
+                font-size: 24px;
+                line-height: 24px;
+                padding-top: 8px;
+                right: 10px !important;
+            }
+            
+            &::before {
+                left: 2px;
+                top: 2px;
+                zoom: 70%;
+            }
+        }
+    }
+}
+
+.highlight{
+    color: var(--primary);
+}
+
+#landing{
+    .bg-gradient {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        aspect-ratio: 1;
+        background: radial-gradient(206.93% 131.08% at 6.15% 8.50%, var(--primary) 0%, var(--bg) 40%, var(--bg) 100%);
+        animation: breathe 4s ease-in-out infinite;
+    }
+    .content-wrapper{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .content{
+        display: flex;
+        margin-bottom: 10vmin;
+        width: 100%;
+        gap: 2rem;
+
+        h1{
+            line-height: 21vmin;
+            font-size: 20vmin;
+        }
+
+        p{
+            font-family: 'Bebas Neue';
+            margin-left: 0.25rem;
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 10vmax;
+        background: linear-gradient(360deg, var(--bg) 0%, rgba(1, 1, 15, 0.00) 100%);
+    }
+
+    .circle-right{
+        width: 2400px;
+        height: 2400px;
+        position: absolute;
+        top: -500px;
+        z-index: 1;
+        left: calc(100vw - 30vmin);
+        animation: rotate 100s linear infinite;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes breathe {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
