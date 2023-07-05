@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
   const root = document.querySelector(":root");
@@ -17,3 +19,33 @@ const toggleTheme = (e) => {
 };
 
 document.getElementById("theme-switch").addEventListener("change", toggleTheme);
+
+function navEnterLink(e) {
+  gsap.to("#nav-thumb", {
+    duration: 0.7,
+    width: e.target.clientWidth,
+    ease: "elastic.out(1, 0.7)",
+    left: e.target.offsetLeft,
+  });
+}
+
+function navResetThumb() {
+  let active = document.querySelector("#nav-list li.active");
+  gsap.to("#nav-thumb", {
+    duration: 0.7,
+    width: active.clientWidth,
+    ease: "elastic.out(1, 0.7)",
+    left: active.offsetLeft,
+  });
+}
+
+document.querySelectorAll("#nav-list li").forEach((link) => {
+  link.addEventListener("mouseenter", navEnterLink);
+  link.addEventListener("mouseleave", navResetThumb);
+});
+
+function onLoad() {
+  navResetThumb();
+}
+
+window.addEventListener("load", onLoad);

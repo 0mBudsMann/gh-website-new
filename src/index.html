@@ -10,6 +10,7 @@
   </head>
   <body>
     <main>
+      <!-- Logo  -->
       <div class="logo top-5 md:top-10 left-5 md:left-10 h-14 md:h-20">
         <svg viewBox="0 0 520 455" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -25,6 +26,7 @@
         </svg>
       </div>
 
+      <!-- Theme Switch  -->
       <div class="absolute top-7 md:top-10 right-10">
         <label class="theme-switch">
           <input type="checkbox" id="theme-switch" />
@@ -35,19 +37,37 @@
         </label>
       </div>
 
-      <section id="landing">
+      <!-- Bottom Navbar  -->
+      <nav>
+        <ul id="nav-list">
+          <li class="active">
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#wings">Wings</a>
+          </li>
+          <li>
+            <a href="#coordinators">Coordinators</a>
+          </li>
+          <li>
+            <a href="#connect">Connect</a>
+          </li>
+          <span id="nav-thumb"></span>
+        </ul>
+      </nav>
+
+      <!-- Landing page  -->
+      <section id="home">
         <div class="bg-gradient"></div>
         <div class="content-wrapper p-5 md:p-16">
           <div class="content flex-col sm:flex-row sm:justify-between">
             <div class="title my-auto">
               <h1>GEEK</h1>
               <h1 class="highlight">HAVEN</h1>
-              <p class="uppercase text-[5vmin] md:text-[3.5vmin]">Technical Society</p>
-              <p class="uppercase text-[5vmin] md:text-[3.5vmin]">IIIT <span class="highlight">Allahabad</span></p>
+              <p class="uppercase text-[5vmin] md:text-[4vmin]">Technical Society</p>
+              <p class="uppercase text-[5vmin] md:text-[4vmin]">IIIT <span class="highlight">Allahabad</span></p>
             </div>
-            <p
-              class="description uppercase self-end max-w-[180px] md:max-w-md text-right text-[5vmin] md:text-[3.5vmin]"
-            >
+            <p class="description uppercase self-end max-w-[180px] md:max-w-md text-right text-[5vmin] md:text-[4vmin]">
               We are a group of <span class="highlight">highly</span>
               <span class="highlight">motivated</span> individuals with an <span class="highlight">excellent</span> tech
               background.
@@ -67,10 +87,13 @@
             />
           </svg>
         </div>
+        <span class="scroll-motivation text-[5vmin] md:text-[4vmin] bottom-32 md:bottom-12 left-8 md:left-20"
+          >|Scroll|</span
+        >
       </section>
 
       <!-- <section></section> -->
     </main>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>
