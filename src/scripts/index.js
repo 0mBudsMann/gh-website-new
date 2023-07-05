@@ -24,7 +24,7 @@ function navEnterLink(e) {
   gsap.to("#nav-thumb", {
     duration: 0.7,
     width: e.target.clientWidth,
-    ease: "elastic.out(1, 0.7)",
+    ease: "elastic.out(1, 1.7)",
     left: e.target.offsetLeft,
   });
 }
@@ -34,7 +34,7 @@ function navResetThumb() {
   gsap.to("#nav-thumb", {
     duration: 0.7,
     width: active.clientWidth,
-    ease: "elastic.out(1, 0.7)",
+    ease: "elastic.out(1, 1.7)",
     left: active.offsetLeft,
   });
 }
