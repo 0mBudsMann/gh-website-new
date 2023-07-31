@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
@@ -44,8 +47,134 @@ document.querySelectorAll("#nav-list li").forEach((link) => {
   link.addEventListener("mouseleave", navResetThumb);
 });
 
+let sectionHeight = window.innerHeight;
+
+function sectionAnimations() {
+  let sectionColorTimeLine = gsap.timeline();
+  let bottombarTimeLine = gsap.timeline();
+
+  sectionColorTimeLine.to(":root", {
+    "--primary": () => {
+      return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+    },
+    scrollTrigger: {
+      trigger: "#wings",
+      end: "bottom bottom",
+      scrub: true,
+    },
+  });
+
+  bottombarTimeLine.fromTo(
+    "#nav-thumb",
+    {
+      width: () => document.getElementById("nav-home").clientWidth,
+      left: () => document.getElementById("nav-home").offsetLeft,
+    },
+    {
+      width: () => document.getElementById("nav-wings").clientWidth,
+      left: () => document.getElementById("nav-wings").offsetLeft,
+      scrollTrigger: {
+        trigger: "#wings",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    }
+  );
+
+  sectionColorTimeLine.fromTo(":root", ">", {
+    "--primary": () => {
+      return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+    },
+    scrollTrigger: {
+      trigger: "#wings",
+      start: () => sectionHeight,
+      end: () => 8 * sectionHeight,
+      onEnter: () => {
+        document.querySelector(".active").classList.remove("active");
+        document.getElementById("nav-wings").classList.add("active");
+      },
+      onLeaveBack: () => {
+        document.querySelector(".active").classList.remove("active");
+        document.getElementById("nav-home").classList.add("active");
+      },
+    },
+  });
+
+  let wingSectionTimeLine = gsap.timeline();
+
+  for (let i = 1; i <= 7; i++) {
+    wingSectionTimeLine.fromTo(
+      ".pin-wrap",
+      {},
+      {
+        scrollTrigger: {
+          scrub: true,
+          trigger: "#wings",
+          pin: true,
+          pinType: "fixed",
+          pinSpacing: true,
+          start: () => i * sectionHeight,
+          end: () => "+=" + sectionHeight,
+          snap: {
+            snapTo: -1,
+            duration: 0.3,
+            ease: "power1.inOut",
+          },
+        },
+        rotate: i * -45,
+        ease: "power1.inOut",
+      }
+    );
+  }
+
+  sectionColorTimeLine.fromTo(":root", ">", {
+    "--primary": () => {
+      return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+    },
+    scrollTrigger: {
+      trigger: "#coordinators",
+      end: "bottom bottom",
+      scrub: true,
+    },
+  });
+
+  bottombarTimeLine.fromTo(
+    "#nav-thumb",
+    {
+      width: () => document.getElementById("nav-wings").clientWidth,
+      left: () => document.getElementById("nav-wings").offsetLeft,
+    },
+    {
+      width: () => document.getElementById("nav-coordinators").clientWidth,
+      left: () => document.getElementById("nav-coordinators").offsetLeft,
+      scrollTrigger: {
+        trigger: "#coordinators",
+        end: "bottom bottom",
+        scrub: true,
+        onEnter: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-coordinators").classList.add("active");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-wings").classList.add("active");
+        },
+      },
+    }
+  );
+}
+
 function onLoad() {
   navResetThumb();
+  sectionAnimations();
 }
 
 window.addEventListener("load", onLoad);
+window.addEventListener("refresh", () => {
+  ScrollTrigger.clearScrollMemory();
+  window.history.scrollRestoration = "manual";
+});
+
+window.addEventListener("resize", () => {
+  sectionHeight = window.innerHeight;
+});

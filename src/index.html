@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
   </head>
   <body>
-    <main>
+    <div>
       <!-- Logo  -->
       <div class="logo top-5 md:top-10 left-5 md:left-10 h-14 md:h-20">
         <svg viewBox="0 0 520 455" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,45 +26,47 @@
         </svg>
       </div>
 
-      <!-- Theme Switch  -->
-      <div class="absolute top-7 md:top-10 right-10">
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-switch" />
-          <div class="slider">
-            <div class="dark"> Dark </div>
-            <div class="light">Light</div>
-          </div>
-        </label>
-      </div>
-
       <!-- Bottom Navbar  -->
       <nav>
         <ul id="nav-list">
-          <li class="active">
+          <li id="nav-home" class="active">
             <a href="#home">Home</a>
           </li>
-          <li>
+          <li id="nav-wings">
             <a href="#wings">Wings</a>
           </li>
-          <li>
+          <li id="nav-coordinators">
             <a href="#coordinators">Coordinators</a>
           </li>
-          <li>
+          <li id="nav-connect">
             <a href="#connect">Connect</a>
           </li>
           <span id="nav-thumb"></span>
         </ul>
       </nav>
+    </div>
 
+    <main>
       <!-- Landing page  -->
       <section id="home">
+        <!-- Theme Switch  -->
+        <div class="absolute top-7 md:top-10 right-10">
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <div class="slider">
+              <div class="dark"> Dark </div>
+              <div class="light">Light</div>
+            </div>
+          </label>
+        </div>
+
         <div class="bg-gradient"></div>
         <div class="content-wrapper p-5 md:p-16">
           <div class="content flex-col sm:flex-row sm:justify-between">
             <div class="title my-auto">
               <h1>GEEK</h1>
               <h1 class="highlight">HAVEN</h1>
-              <p class="uppercase text-[5vmin] md:text-[4vmin]">Technical Society</p>
+              <p class="uppercase text-[5vmin] md:text-[4vmin] mt-4">Technical Society</p>
               <p class="uppercase text-[5vmin] md:text-[4vmin]">IIIT <span class="highlight">Allahabad</span></p>
             </div>
             <p class="description uppercase self-end max-w-[180px] md:max-w-md text-right text-[5vmin] md:text-[4vmin]">
@@ -92,7 +94,50 @@
         >
       </section>
 
-      <!-- <section></section> -->
+      <section id="wings">
+        <div class="bg-gradient"></div>
+        <div class="pin-wrap">
+          <div class="inner-wrapper">
+            <svg class="circle" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                cx="600"
+                cy="600"
+                r="600"
+                stroke="var(--text)"
+                stroke-opacity="0.6"
+                stroke-width="4"
+                stroke-dasharray="16 16"
+              />
+            </svg>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Web</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">App</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Design</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Blockchain</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">AI/ML</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">CC</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Cyber&thinsp;Sec</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">FOSS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="coordinators"> </section>
     </main>
     <script src="scripts/index.js" type="module"></script>
   </body>
