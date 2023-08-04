@@ -100,10 +100,12 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
+          navResetThumb();
         },
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-home").classList.add("active");
+          navResetThumb();
         },
       },
     },
@@ -155,10 +157,12 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-coordinators").classList.add("active");
+          navResetThumb();
         },
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
+          navResetThumb();
         },
       },
     }
@@ -180,10 +184,12 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-coordinators").classList.add("active");
+          navResetThumb();
         },
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
+          navResetThumb();
         },
       },
     }
@@ -204,7 +210,7 @@ function sectionAnimations() {
 }
 
 function onLoad() {
-  // sectionHeight = document.getElementById("home").clientHeight;
+  sectionHeight = document.getElementById("home").clientHeight;
   navResetThumb();
   sectionAnimations();
 }
@@ -216,5 +222,5 @@ window.addEventListener("refresh", () => {
 });
 
 window.addEventListener("resize", () => {
-  // sectionHeight = document.getElementById("home").clientHeight;
+  sectionHeight = document.getElementById("home").clientHeight;
 });
