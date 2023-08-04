@@ -43,10 +43,10 @@ function navResetThumb() {
   });
 }
 
-// document.querySelectorAll("#nav-list li").forEach((link) => {
-//   link.addEventListener("mouseenter", navEnterLink);
-//   link.addEventListener("mouseleave", navResetThumb);
-// });
+document.querySelectorAll("#nav-list li").forEach((link) => {
+  link.addEventListener("mouseenter", navEnterLink);
+  link.addEventListener("mouseleave", navResetThumb);
+});
 
 let sectionHeight = window.innerHeight;
 
