@@ -4,6 +4,8 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+ScrollTrigger.normalizeScroll(true);
+
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
   const root = document.querySelector(":root");
@@ -202,7 +204,7 @@ function sectionAnimations() {
 }
 
 function onLoad() {
-  sectionHeight = window.innerHeight;
+  // sectionHeight = window.innerHeight;
   navResetThumb();
   sectionAnimations();
 }
@@ -214,5 +216,5 @@ window.addEventListener("refresh", () => {
 });
 
 window.addEventListener("resize", () => {
-  sectionHeight = window.innerHeight;
+  // sectionHeight = window.innerHeight;
 });
