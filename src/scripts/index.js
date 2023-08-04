@@ -50,7 +50,7 @@ document.querySelectorAll("#nav-list li").forEach((link) => {
   link.addEventListener("mouseleave", navResetThumb);
 });
 
-let sectionHeight = window.innerHeight;
+let sectionHeight = document.getElementById("home").clientHeight;
 
 function sectionAnimations() {
   let sectionColorTimeLine = gsap.timeline();
@@ -204,7 +204,7 @@ function sectionAnimations() {
 }
 
 function onLoad() {
-  // sectionHeight = window.innerHeight;
+  // sectionHeight = document.getElementById("home").clientHeight;
   navResetThumb();
   sectionAnimations();
 }
@@ -216,5 +216,5 @@ window.addEventListener("refresh", () => {
 });
 
 window.addEventListener("resize", () => {
-  // sectionHeight = window.innerHeight;
+  // sectionHeight = document.getElementById("home").clientHeight;
 });
