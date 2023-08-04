@@ -100,8 +100,8 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
-          navResetThumb();
         },
+        onLeave: () => navResetThumb(),
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-home").classList.add("active");
@@ -157,8 +157,8 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-coordinators").classList.add("active");
-          navResetThumb();
         },
+        onLeave: () => navResetThumb(),
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
@@ -184,8 +184,8 @@ function sectionAnimations() {
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-coordinators").classList.add("active");
-          navResetThumb();
         },
+        onLeave: () => navResetThumb(),
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
