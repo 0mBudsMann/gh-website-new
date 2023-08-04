@@ -4,5 +4,10 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    {
+      name: "preset-default",
+    },
+    "cleanupIDs",
+  ],
 };

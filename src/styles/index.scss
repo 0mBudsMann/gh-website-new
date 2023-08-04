@@ -1,5 +1,6 @@
 main {
     width: 100%;
+    // scroll-behavior: smooth;
 }
 
 section {
@@ -321,6 +322,17 @@ nav{
                 }
             }
         }
+    }
+
+    wing-content {
+        position: relative;
+        z-index: 2;
+        width: 60vmin;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 }
 

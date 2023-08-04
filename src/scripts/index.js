@@ -1,7 +1,8 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
@@ -42,10 +43,10 @@ function navResetThumb() {
   });
 }
 
-document.querySelectorAll("#nav-list li").forEach((link) => {
-  link.addEventListener("mouseenter", navEnterLink);
-  link.addEventListener("mouseleave", navResetThumb);
-});
+// document.querySelectorAll("#nav-list li").forEach((link) => {
+//   link.addEventListener("mouseenter", navEnterLink);
+//   link.addEventListener("mouseleave", navResetThumb);
+// });
 
 let sectionHeight = window.innerHeight;
 
@@ -55,10 +56,10 @@ function sectionAnimations() {
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
-      return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+      return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
     },
     scrollTrigger: {
-      trigger: "#wings",
+      trigger: "#home",
       end: "bottom bottom",
       scrub: true,
     },
@@ -81,24 +82,31 @@ function sectionAnimations() {
     }
   );
 
-  sectionColorTimeLine.fromTo(":root", ">", {
-    "--primary": () => {
-      return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
-    },
-    scrollTrigger: {
-      trigger: "#wings",
-      start: () => sectionHeight,
-      end: () => 8 * sectionHeight,
-      onEnter: () => {
-        document.querySelector(".active").classList.remove("active");
-        document.getElementById("nav-wings").classList.add("active");
+  sectionColorTimeLine.to(
+    ":root",
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
       },
-      onLeaveBack: () => {
-        document.querySelector(".active").classList.remove("active");
-        document.getElementById("nav-home").classList.add("active");
+      scrollTrigger: {
+        trigger: "#wings",
+        start: 1,
+        // end: () => 8 * sectionHeight,
+        // start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+        onEnter: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-wings").classList.add("active");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-home").classList.add("active");
+        },
       },
     },
-  });
+    ">"
+  );
 
   let wingSectionTimeLine = gsap.timeline();
 
@@ -118,7 +126,7 @@ function sectionAnimations() {
           snap: {
             snapTo: -1,
             duration: 0.3,
-            ease: "power1.inOut",
+            ease: "power1.inwingsOut",
           },
         },
         rotate: i * -45,
@@ -127,16 +135,32 @@ function sectionAnimations() {
     );
   }
 
-  sectionColorTimeLine.fromTo(":root", ">", {
-    "--primary": () => {
-      return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+  sectionColorTimeLine.fromTo(
+    ":root",
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+      },
     },
-    scrollTrigger: {
-      trigger: "#coordinators",
-      end: "bottom bottom",
-      scrub: true,
-    },
-  });
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+      },
+      scrollTrigger: {
+        trigger: "#coordinators",
+        end: "bottom bottom",
+        scrub: true,
+        onEnter: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-coordinators").classList.add("active");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-wings").classList.add("active");
+        },
+      },
+    }
+  );
 
   bottombarTimeLine.fromTo(
     "#nav-thumb",
@@ -162,9 +186,23 @@ function sectionAnimations() {
       },
     }
   );
+
+  let links = gsap.utils.toArray("nav a");
+  links.forEach((a) => {
+    let element = document.querySelector(a.getAttribute("href"));
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: element.getBoundingClientRect().top + element.offsetTop,
+        overwrite: "auto",
+      });
+    });
+  });
 }
 
 function onLoad() {
+  sectionHeight = window.innerHeight;
   navResetThumb();
   sectionAnimations();
 }
