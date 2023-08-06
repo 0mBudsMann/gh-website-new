@@ -319,21 +319,29 @@ nav{
 
             @for $i from 2 through 9 {
                 .point:nth-child(#{$i}n) {
-                    transform: translate(-50%, -50%) rotate(#{($i + 2) * 45}deg) translateX(calc(-50vh)) rotate(180deg);
+                    transform: translate(-50%, -50%) rotate(#{($i + 2) * 45}deg) translateX(calc(-50svh)) rotate(180deg);
                 }
             }
         }
     }
 
-    wing-content {
-        position: relative;
+    .wing-content {
+        position: absolute;
+        right: 0;
         z-index: 2;
         width: 60vmin;
+        padding: 4rem 2rem;
         height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
 
+        h2{
+            text-align: right;
+            line-height: 25vmin;
+            font-size: 20vmin;
+            color: var(--primary);
+        }
     }
 }
 

@@ -54,7 +54,6 @@ let sectionHeight = document.getElementById("home").clientHeight;
 
 function sectionAnimations() {
   let sectionColorTimeLine = gsap.timeline();
-  let bottombarTimeLine = gsap.timeline();
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
@@ -66,23 +65,6 @@ function sectionAnimations() {
       scrub: true,
     },
   });
-
-  bottombarTimeLine.fromTo(
-    "#nav-thumb",
-    {
-      width: () => document.getElementById("nav-home").clientWidth,
-      left: () => document.getElementById("nav-home").offsetLeft,
-    },
-    {
-      width: () => document.getElementById("nav-wings").clientWidth,
-      left: () => document.getElementById("nav-wings").offsetLeft,
-      scrollTrigger: {
-        trigger: "#wings",
-        end: "bottom bottom",
-        scrub: true,
-      },
-    }
-  );
 
   sectionColorTimeLine.to(
     ":root",
@@ -168,41 +150,13 @@ function sectionAnimations() {
     }
   );
 
-  bottombarTimeLine.fromTo(
-    "#nav-thumb",
-    {
-      width: () => document.getElementById("nav-wings").clientWidth,
-      left: () => document.getElementById("nav-wings").offsetLeft,
-    },
-    {
-      width: () => document.getElementById("nav-coordinators").clientWidth,
-      left: () => document.getElementById("nav-coordinators").offsetLeft,
-      scrollTrigger: {
-        trigger: "#coordinators",
-        end: "bottom bottom",
-        scrub: true,
-        onEnter: () => {
-          document.querySelector(".active").classList.remove("active");
-          document.getElementById("nav-coordinators").classList.add("active");
-        },
-        onLeave: () => navResetThumb(),
-        onLeaveBack: () => {
-          document.querySelector(".active").classList.remove("active");
-          document.getElementById("nav-wings").classList.add("active");
-          navResetThumb();
-        },
-      },
-    }
-  );
-
   let links = gsap.utils.toArray("nav a");
   links.forEach((a) => {
-    let element = document.querySelector(a.getAttribute("href"));
     a.addEventListener("click", (e) => {
       e.preventDefault();
       gsap.to(window, {
         duration: 1,
-        scrollTo: element.getBoundingClientRect().top + element.offsetTop,
+        scrollTo: a.getAttribute("href"),
         overwrite: "auto",
       });
     });
