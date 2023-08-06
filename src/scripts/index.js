@@ -74,9 +74,6 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#wings",
-        start: 1,
-        // end: () => 8 * sectionHeight,
-        // start: "top top",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
@@ -97,6 +94,69 @@ function sectionAnimations() {
   let wingSectionTimeLine = gsap.timeline();
 
   for (let i = 1; i <= 7; i++) {
+    let currDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i})`);
+
+    wingSectionTimeLine.fromTo(
+      currDescElement,
+      {
+        rotateX: 0,
+        y: 0,
+      },
+      {
+        scrollTrigger: {
+          scrub: true,
+          trigger: "#wings",
+          pinSpacing: true,
+          start: () => i * sectionHeight,
+          end: () => "+=" + sectionHeight,
+          snap: {
+            snapTo: -1,
+            duration: 0.3,
+            ease: "power1.inwingsOut",
+          },
+        },
+        rotateX: 90,
+        y: -currDescElement.clientHeight,
+        ease: "power1.inOut",
+      }
+    );
+
+    let nextDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i + 1})`);
+
+    wingSectionTimeLine.fromTo(
+      nextDescElement,
+      {
+        rotateX: -90,
+        y: nextDescElement.clientHeight,
+      },
+      {
+        scrollTrigger: {
+          scrub: true,
+          trigger: "#wings",
+          pinSpacing: true,
+          start: () => i * sectionHeight,
+          end: () => "+=" + sectionHeight,
+          snap: {
+            snapTo: -1,
+            duration: 0.3,
+            ease: "power1.inwingsOut",
+          },
+        },
+        rotateX: 0,
+        y: 0,
+        ease: "power1.inOut",
+      }
+    );
+
+    for (let j = i + 2; j <= 8; j++) {
+      let descElement = document.querySelector(`.desc-wrapper p:nth-child(${j})`);
+
+      wingSectionTimeLine.set(descElement, {
+        rotateX: -90,
+        y: descElement.clientHeight,
+      });
+    }
+
     wingSectionTimeLine.fromTo(
       ".pin-wrap",
       {},
@@ -134,6 +194,7 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#coordinators",
+        start: "top center",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
@@ -144,6 +205,36 @@ function sectionAnimations() {
         onLeaveBack: () => {
           document.querySelector(".active").classList.remove("active");
           document.getElementById("nav-wings").classList.add("active");
+          navResetThumb();
+        },
+      },
+    }
+  );
+
+  sectionColorTimeLine.fromTo(
+    ":root",
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+      },
+    },
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--green").trim();
+      },
+      scrollTrigger: {
+        trigger: "#connect",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: true,
+        onEnter: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-connect").classList.add("active");
+        },
+        onLeave: () => navResetThumb(),
+        onLeaveBack: () => {
+          document.querySelector(".active").classList.remove("active");
+          document.getElementById("nav-coordinators").classList.add("active");
           navResetThumb();
         },
       },
