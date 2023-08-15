@@ -368,16 +368,18 @@ nav{
 #coordinators {
 
     .rotating-container {
-        height: 11vmin;
+        height: 12vmin;
         overflow: hidden;
         color: var(--primary);
         .rotate-text{
-            font-size: 8.5vmin;
+            font-size: 10vmin;
             text-transform: uppercase;
+            font-family: 'Tusker Grotesk', sans-serif;
+
         }
         .rotate-svg{
             margin-top: 2vmin;
-            height: 8.5vmin;
+            height: 10vmin;
             margin-inline: 5vmin;
         }
 
@@ -452,5 +454,33 @@ nav{
 
     100% {
         transform: scale(1);
+    }
+}
+
+
+
+@for $i from 1 through 4 {
+    .primary-colors:nth-child(#{$i}n) {
+        transition: background-color 1s ease-in-out;
+        animation: color-transition 5s linear #{$i * -1.25s} infinite;
+        // animation: color-transition 3s linear #{$i * 0.3} infinite;
+        
+    }
+}
+@keyframes color-transition {
+    0%{
+        background-color: var(--blue);
+    }
+    25%{
+        background-color: var(--yellow);
+    }
+    50%{
+        background-color: var(--pink);
+    }
+    75%{
+        background-color: var(--green);
+    }
+    100%{
+        background-color: var(--blue);
     }
 }
