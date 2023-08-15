@@ -222,7 +222,7 @@
       </section>
 
       <section id="coordinators" class="flex flex-col justify-center">
-        <div class="rotating-container hidden sm:block">
+        <div class="rotating-container">
           <div class="rotate-left flex justify-start">
             <span
               ><div class="flex flex-nowrap justify-evenly">
@@ -326,7 +326,7 @@
           <div class="primary-colors rounded-3xl"></div>
           <div class="primary-colors rounded-3xl"></div>
         </div>
-        <div class="rotating-container hidden sm:block">
+        <div class="rotating-container">
           <div class="rotate-right flex justify-start">
             <span
               ><div class="flex flex-nowrap justify-evenly">
@@ -423,7 +423,53 @@
           </div>
         </div>
       </section>
-      <section id="connect"></section>
+      <section id="connect" class="relative">
+        <div
+          class="flex lg:flex-row flex-col h-fit w-full justify-center items-center gap-8 lg:gap-32 flex-wrap absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <div class="flex flex-col gap-4 lg:items-start items-center">
+            <h1 class="text-8xl font-semibold text-[var(--primary)]">
+              CONNECT
+            </h1>
+            <ul>
+              <li class="underline-hover-effect">
+                <a href="">geekhaven@iiita.ac.in</a>
+              </li>
+            </ul>
+            <button class="blog-button">
+              <span>OUR BLOGS</span>
+            </button>
+          </div>
+
+          <div
+            class="w-2 bg-white h-[600px] lg:block hidden rounded-full"
+          ></div>
+          <div
+            class="h-2 w-[80%] rounded-full my-4 bg-white lg:hidden block"
+          ></div>
+          <div class="flex flex-row md:gap-32 justify-evenly lg:w-fit w-full">
+            <div class="flex flex-col">
+              <h3 class="connect-heading">SOCIALS</h3>
+              <ul class="flex flex-col">
+                <li class="underline-hover-effect"><a>Linkedin</a></li>
+                <li class="underline-hover-effect"><a>Instagram</a></li>
+                <li class="underline-hover-effect"><a>Facebook</a></li>
+                <li class="underline-hover-effect"><a>Discord</a></li>
+                <li class="underline-hover-effect"><a>Twitter</a></li>
+              </ul>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="connect-heading">WORKS</h3>
+
+              <ul class="flex flex-col">
+                <li class="underline-hover-effect"><a>Github</a></li>
+                <li class="underline-hover-effect"><a>lnf.iiita.ac.in</a></li>
+                <li class="underline-hover-effect"><a>Play Store</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="scripts/index.js" type="module"></script>
   </body>

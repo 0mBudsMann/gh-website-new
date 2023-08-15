@@ -424,6 +424,86 @@ nav{
       }
 }
 
+
+
+#connect{
+    // rounded-full px-8 py-2 w-fit 
+    .blog-button{
+        border-radius: 1000px;
+        padding: 0.5rem 2rem;
+        max-width: fit-content;
+        color: var(--primary);
+        font-weight: 400;
+        font-size: 1rem;
+        border: 2px solid var(--primary);
+        transition: all 0.3s ease-in-out;
+    }
+    .blog-button:hover{
+        background-color: var(--primary);
+        color: var(--white);
+
+    }
+    
+
+    ul {
+        list-style: none;
+    }
+    li {
+        margin: 0.25rem 0;
+        font-size: 36px;
+    }
+    
+    a.underline-hover-effect {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .underline-hover-effect {
+        width: fit-content;
+        display: inline-block;
+        padding-bottom: 0.25rem; /* defines the space between text and underline */
+        position: relative;
+    }
+    
+    .underline-hover-effect::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: width 0.25s ease-out;
+    }
+    .underline-hover-effect:hover::before {
+        width: 100%;
+    }
+
+    .connect-heading{
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--primary);
+    }
+
+
+    @media screen and (max-width: 1050px) {
+        .connect-heading{
+            font-size: 2rem;
+        }
+
+        .blog-button{
+            font-size: 0.8rem;
+        }
+
+        li {
+            font-size: 1rem;
+        }
+
+
+        
+    }
+}
+
 @media screen and (max-width: 768px) {
     #wings {
         .pin-wrap, .bg-gradient {

@@ -57,7 +57,10 @@ function sectionAnimations() {
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
-      return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
+      return window
+        .getComputedStyle(document.body)
+        .getPropertyValue("--blue")
+        .trim();
     },
     scrollTrigger: {
       trigger: "#home",
@@ -70,7 +73,10 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--yellow")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#wings",
@@ -94,7 +100,9 @@ function sectionAnimations() {
   let wingSectionTimeLine = gsap.timeline();
 
   for (let i = 1; i <= 7; i++) {
-    let currDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i})`);
+    let currDescElement = document.querySelector(
+      `.desc-wrapper p:nth-child(${i})`
+    );
 
     wingSectionTimeLine.fromTo(
       currDescElement,
@@ -121,7 +129,9 @@ function sectionAnimations() {
       }
     );
 
-    let nextDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i + 1})`);
+    let nextDescElement = document.querySelector(
+      `.desc-wrapper p:nth-child(${i + 1})`
+    );
 
     wingSectionTimeLine.fromTo(
       nextDescElement,
@@ -149,7 +159,9 @@ function sectionAnimations() {
     );
 
     for (let j = i + 2; j <= 8; j++) {
-      let descElement = document.querySelector(`.desc-wrapper p:nth-child(${j})`);
+      let descElement = document.querySelector(
+        `.desc-wrapper p:nth-child(${j})`
+      );
 
       wingSectionTimeLine.set(descElement, {
         rotateX: -90,
@@ -185,16 +197,22 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--yellow")
+          .trim();
       },
     },
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--pink")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#coordinators",
-        start: "top center",
+        start: "-500 center",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
@@ -215,16 +233,22 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--pink")
+          .trim();
       },
     },
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--green").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--green")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#connect",
-        start: "top center",
+        start: "-500 center",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
