@@ -405,6 +405,40 @@ nav{
             animation-delay: 15s;
         }
       }
+      @media screen and (min-width: 1024px) {
+        .person-container{
+            .person-name{
+                transition: all ease-in-out 0.5s;
+                transform: translateY(200%) rotate(20deg);
+            }
+            .person-role{
+                transition: all ease-in-out 0.5s;
+                transform: translateY(-200%); 
+            }
+            @for $i from 1 through 100 {
+                .person-profile:nth-child(#{$i}n){
+                    transform: translateX(200%);
+                    transition: all ease-in-out 0.25s;
+                    transition-delay: #{$i * 0.25s};
+                }
+            }
+        }
+      }
+      
+      .person-container:hover{
+        .person-name{
+            transform: translateY(0) rotate(0);
+        }
+        .person-role{
+            transform: translateY(0) rotate(0);
+        }
+        @for $i from 1 through 10 {
+            .person-profile:nth-child(#{$i}n){
+                transform: translateX(0);
+            }
+        }
+      }
+      
       
       @keyframes rotating-left {
         0% {
