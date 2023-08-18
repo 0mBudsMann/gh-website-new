@@ -419,25 +419,31 @@ nav{
                 .person-profile:nth-child(#{$i}n){
                     transform: translateX(200%);
                     transition: all ease-in-out 0.25s;
-                    transition-delay: #{$i * 0.25s};
+                    transition-delay: #{$i * 0.05s};
+                }
+            }
+        }
+
+        .person-container.active{
+            .person-name{
+                transform: translateY(0) rotate(0);
+            }
+            .person-role{
+                transform: translateY(0) rotate(0);
+            }
+            .person-color{
+                background-color: #FDFDFF;
+                color: #000000;
+            }
+    
+            @for $i from 1 through 10 {
+                .person-profile:nth-child(#{$i}n){
+                    transform: translateX(0);
                 }
             }
         }
       }
       
-      .person-container:hover{
-        .person-name{
-            transform: translateY(0) rotate(0);
-        }
-        .person-role{
-            transform: translateY(0) rotate(0);
-        }
-        @for $i from 1 through 10 {
-            .person-profile:nth-child(#{$i}n){
-                transform: translateX(0);
-            }
-        }
-      }
       
       
       @keyframes rotating-left {
@@ -461,7 +467,9 @@ nav{
 
 
 #connect{
-    // rounded-full px-8 py-2 w-fit 
+    
+    margin-bottom: calc(100vh - 100svh);
+
     .blog-button{
         border-radius: 1000px;
         padding: 0.5rem 2rem;
@@ -576,7 +584,7 @@ nav{
 @for $i from 1 through 4 {
     .primary-colors:nth-child(#{$i}n) {
         transition: background-color 1s ease-in-out;
-        animation: color-transition 5s linear #{$i * -1.25s} infinite;
+        animation: color-transition 4s steps(1) #{$i * -0.72s} infinite;
         // animation: color-transition 3s linear #{$i * 0.3} infinite;
         
     }

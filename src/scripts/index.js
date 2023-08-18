@@ -80,6 +80,7 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#wings",
+        start: "top bottom-=100px",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
@@ -212,7 +213,7 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#coordinators",
-        start: "-500 center",
+        start: "top bottom-=100px",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
@@ -228,6 +229,18 @@ function sectionAnimations() {
       },
     }
   );
+
+  const personUI = gsap.utils.toArray(".person-container");
+  personUI.forEach((person) => {
+    gsap.to(person, {
+      scrollTrigger: {
+        trigger: person,
+        start: "top bottom-=10svh",
+        end: "+=80svh",
+        toggleClass: "active",
+      },
+    });
+  });
 
   sectionColorTimeLine.fromTo(
     ":root",
@@ -248,7 +261,7 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#connect",
-        start: "-500 center",
+        start: "top bottom-=100px",
         end: "bottom bottom",
         scrub: true,
         onEnter: () => {
