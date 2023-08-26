@@ -80,8 +80,8 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#wings",
-        start: "top bottom-=100px",
-        end: "bottom bottom",
+        start: "bottom bottom",
+        end: "top bottom",
         scrub: true,
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
