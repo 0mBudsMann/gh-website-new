@@ -18,7 +18,7 @@ const toggleTheme = (e) => {
   } else {
     root.style.setProperty("--bg", "#fdfdff");
     root.style.setProperty("--text", "#01010F");
-    root.style.setProperty("--yellow", "#E6C242");
+    root.style.setProperty("--yellow", "#f5b209");
     root.style.setProperty("--pink", "#E8546B");
     root.style.setProperty("--green", "#41A45E");
   }
