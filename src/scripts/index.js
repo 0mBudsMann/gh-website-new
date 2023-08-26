@@ -306,3 +306,35 @@ window.addEventListener("refresh", () => {
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
+
+
+//Reducing opacity on scroll
+function makeScrollBarTransparent() {
+  var navElement = document.querySelector("nav");
+  
+  //To get the maximum scrollY
+  const totalPageHeight = Math.max(
+    document.body.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.clientHeight,
+    document.documentElement.scrollHeight,
+    document.documentElement.offsetHeight
+  );
+
+  // Get the height of the viewport
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  // Calculate the maximum scroll value
+  const maxScrollY = totalPageHeight - viewportHeight;
+
+  
+  if (this.scrollY > maxScrollY*0.05 && this.scrollY < maxScrollY * 0.915)
+    navElement.style.opacity = .2;
+
+  else
+    navElement.style.opacity = 1;
+
+  console.log(this.scrollY);
+}
+
+window.addEventListener("scroll", makeScrollBarTransparent, false);
