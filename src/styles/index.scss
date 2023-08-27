@@ -138,7 +138,10 @@ a,
     }
 }
 
+//[Feat]:Added opacity on hover 
 nav {
+    opacity: 0.2;
+    transition: 0.35s;
     background-color: var(--primary);
     height: 60px;
     border-radius: 30px;
@@ -184,6 +187,10 @@ nav {
         z-index: 100003;
         padding: 0 1rem;
     }
+}
+
+nav:hover{
+    opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -285,7 +292,7 @@ nav {
     }
 
     .scroll-motivation {
-        
+
         font-family: 'Bebas Neue';
         color: var(--text);
         z-index: 2;
@@ -433,15 +440,26 @@ nav {
         }
     }
 
+    //Resolved the padding issue
     @media all and (max-width: 748px) {
         .cordiImg {
-            height: 24svh;
-            width: 24svh;
-            transform: translateX(32vmin) translateY(2vmin);
+            //Changing the height and width of the image
+            height: 25.88svh;
+            width: 25.88svh;
+            //Reduced the translate value
+            transform: translateX(26vmin) translateY(2vmin);
         }
 
         .gapSc {
             gap: .1rem;
+        }
+
+        //testing
+        @for $i from 1 through 100 {
+            .person-profile:nth-child(#{$i}n) {
+                //Added some padding
+                padding: 1.75svh;
+            }
         }
     }
 
