@@ -69,3 +69,16 @@ h5,
 h6 {
     font-family: 'Tusker Grotesk', sans-serif;
 }
+.scroll_arrow{
+    display: block;
+    opacity: 50%;
+    font-size: 100px;
+    user-select: none;
+}
+.scroll_arrow:hover{
+    opacity: 100%;
+    
+   
+   
+    
+}
