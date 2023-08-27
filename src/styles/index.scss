@@ -444,8 +444,8 @@ nav:hover {
     @media all and (max-width: 748px) {
         .cordiImg {
             //Changing the height and width of the image
-            height: 31.7svh;
-            width: 31.7svh;
+            height: 98%;
+            width: 60%;
             //Reduced the translate value
             transform: translateX(26vmin) translateY(2vmin);
         }
@@ -487,17 +487,14 @@ nav:hover {
         .person-container {
             .cordiImg {
                 position: absolute;
-                height: 40svh;
-                width: 40svh;
-                transform: translateX(12vmin) translateY(-5vmin);
+                height: 115%;
+                width: 65%;
+                transform: translateX(30%) translateY(-10%);
                 transition: all ease-in 0.3s;
                 filter: grayscale(100%);
             }
 
             .cordiImg:hover {
-                //     height: 32svh;
-                //     width: 32svh;
-                //     transform: translateX(18vmin);
                 filter: grayscale(0);
             }
 
