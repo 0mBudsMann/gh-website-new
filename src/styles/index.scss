@@ -189,7 +189,7 @@ nav {
     }
 }
 
-nav:hover{
+nav:hover {
     opacity: 1;
 }
 
@@ -444,8 +444,8 @@ nav:hover{
     @media all and (max-width: 748px) {
         .cordiImg {
             //Changing the height and width of the image
-            height: 25.88svh;
-            width: 25.88svh;
+            height: 31.7svh;
+            width: 31.7svh;
             //Reduced the translate value
             transform: translateX(26vmin) translateY(2vmin);
         }
