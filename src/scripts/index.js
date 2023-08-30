@@ -4,9 +4,9 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// ScrollTrigger.normalizeScroll({
-//   type: "touch,wheel,pointer",
-// });
+ScrollTrigger.normalizeScroll({
+  type: "touch,wheel,pointer",
+});
 
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
@@ -83,7 +83,7 @@ function sectionAnimations() {
       },
       scrollTrigger: {
         trigger: "#wings",
-        start: "top bottom-=10vh",
+        start: "top bottom-=100px",
         end: "bottom bottom",
         invalidateOnRefresh: true,
         scrub: true,
@@ -294,5 +294,4 @@ window.addEventListener("load", onLoad);
 
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
-  ScrollTrigger.refresh();
 });
