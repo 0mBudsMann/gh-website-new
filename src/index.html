@@ -1,485 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeekHaven IIITA</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/index.scss" />
+    <script src="https://kit.fontawesome.com/9f71669e20.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GeekHaven IIITA</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/index.scss" />
-  <script src="https://kit.fontawesome.com/9f71669e20.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-</head>
-
-<body>
-  <div>
-    <!-- Logo  -->
-    <div class="logo top-5 md:top-10 left-5 md:left-10 h-14 md:h-20">
-      <svg viewBox="0 0 520 455" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M263.896 58.0392C333.121 57.8522 401.949 63.446 452.448 75.3677C446.292 99.4436 428.323 142.558 411.848 170.866L411.516 171.437L412.156 171.602L452.932 182.115L453.316 182.214L453.5 181.863L453.057 181.631C453.5 181.863 453.5 181.862 453.501 181.862L453.502 181.859L453.507 181.849L453.528 181.809L453.609 181.653C453.643 181.588 453.684 181.509 453.733 181.416C453.789 181.308 453.854 181.181 453.93 181.035C454.211 180.491 454.626 179.685 455.16 178.637C456.229 176.541 457.775 173.476 459.687 169.602C463.512 161.854 468.799 150.867 474.654 137.907C486.361 111.992 500.342 78.1744 509.417 46.601L509.552 46.1294L509.083 45.985C382.113 6.90474 184.177 5.41059 16.4782 45.9769L15.9662 46.1008L16.1166 46.6057C64.4677 208.905 126.434 302.089 263.912 443.305L264.26 443.662L264.619 443.315L264.27 442.956C264.619 443.315 264.619 443.314 264.62 443.313L264.624 443.309L264.642 443.292L264.71 443.225C264.771 443.166 264.862 443.078 264.981 442.961C265.22 442.727 265.576 442.378 266.041 441.918C266.972 440.998 268.344 439.635 270.106 437.861C273.63 434.312 278.718 429.118 284.974 422.532C297.487 409.362 314.673 390.628 333.371 368.372C370.759 323.869 414.219 265.251 438.414 208.862L438.644 208.327L438.08 208.181L437.955 208.665C438.08 208.181 438.08 208.181 438.079 208.18L438.075 208.179L438.06 208.175L438 208.16L437.761 208.098C437.549 208.044 437.235 207.963 436.82 207.856C435.992 207.644 434.766 207.33 433.176 206.925C429.995 206.115 425.357 204.941 419.528 203.486C407.869 200.576 391.442 196.539 372.373 192.033C334.235 183.021 285.519 172.13 243.22 164.618L242.142 164.426L242.703 165.367L271.398 213.427L271.512 213.617L271.73 213.661L271.827 213.17C271.73 213.661 271.73 213.661 271.73 213.661L271.733 213.661L271.741 213.663L271.773 213.669L271.904 213.695C272.019 213.718 272.191 213.753 272.417 213.799C272.87 213.89 273.539 214.025 274.405 214.203C276.139 214.557 278.662 215.079 281.823 215.748C288.145 217.085 297.014 219.009 307.205 221.354C327.393 226.002 352.754 232.304 373.761 238.984C324.328 319.381 303.188 344.956 264.266 386.659C218.367 338.685 173.981 276.192 139.352 217.983C104.805 159.915 80.0037 106.169 73.0727 75.3809C125.075 64.1951 194.665 58.2263 263.896 58.0392Z"
-          fill="#F0F0F9" stroke="#01010F" />
-        <path
-          d="M404.309 104.891L404.47 104.345L403.908 104.255C319.52 90.8404 222.87 89.351 121.629 104.255L121.048 104.34L121.225 104.9C133.51 143.692 158.071 187.677 184.914 227.722C211.759 267.772 240.908 303.913 262.394 327.021L262.742 327.395L263.108 327.039C270.808 319.559 282.713 304.634 293.639 289.739C304.564 274.845 314.553 259.922 318.409 252.437L318.708 251.857L318.07 251.719L276.671 242.782L276.343 242.711L276.153 242.988L276.566 243.271C276.153 242.988 276.153 242.988 276.153 242.988L276.153 242.988L276.152 242.99L276.147 242.997L276.127 243.026L276.05 243.138C275.981 243.237 275.88 243.383 275.75 243.57C275.49 243.945 275.113 244.485 274.647 245.147C273.713 246.471 272.421 248.284 270.985 250.235C268.238 253.968 264.995 258.173 262.735 260.463C250.523 249.922 231.975 225.63 215.839 200.918C207.7 188.453 200.186 175.9 194.422 164.978C188.803 154.332 184.873 145.285 183.622 139.391C230.82 129.137 293.038 130.588 340.296 139.391C339.35 141.97 337.944 145.035 336.736 147.526C336.09 148.858 335.503 150.022 335.078 150.853C334.865 151.268 334.693 151.599 334.574 151.827C334.515 151.941 334.468 152.029 334.437 152.088L334.402 152.155L334.393 152.172L334.391 152.177L334.39 152.178L334.39 152.178L334.069 152.783L334.743 152.904L376.142 160.352L376.475 160.412L376.654 160.125L376.231 159.86C376.654 160.125 376.654 160.125 376.655 160.125L376.655 160.123L376.658 160.119L376.67 160.1L376.717 160.025C376.758 159.959 376.819 159.862 376.898 159.733C377.057 159.477 377.291 159.098 377.591 158.608C378.191 157.629 379.054 156.208 380.109 154.437C382.219 150.895 385.097 145.956 388.166 140.364C394.299 129.192 401.223 115.373 404.309 104.891Z"
-          fill="#F0F0F9" stroke="#01010F" />
-      </svg>
-    </div>
-
-    <!-- Bottom Navbar  -->
-    <nav>
-      <ul id="nav-list">
-        <li id="nav-home" class="active">
-          <a href="#home">Home</a>
-        </li>
-        <li id="nav-wings">
-          <a href="#wings">Wings</a>
-        </li>
-        <li id="nav-coordinators">
-          <a href="#coordinators">Coordinators</a>
-        </li>
-        <li id="nav-connect">
-          <a href="#connect">Connect</a>
-        </li>
-        <span id="nav-thumb"></span>
-      </ul>
-    </nav>
-  </div>
-
-  <main>
-    <!-- Landing page  -->
-    <section id="home">
-      <!-- Theme Switch  -->
-      <div class="absolute top-7 md:top-10 right-10">
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-switch" />
-          <div class="slider">
-            <div class="dark">Dark</div>
-            <div class="light">Light</div>
-          </div>
-        </label>
-      </div>
-
-      <div class="bg-gradient"></div>
-      <div class="content-wrapper p-5 md:p-16">
-        <div class="content flex-col sm:flex-row sm:justify-between">
-          <div class="title my-auto">
-            <h1>GEEK</h1>
-            <h1 class="highlight">HAVEN</h1>
-            <p class="uppercase text-[5vmin] md:text-[4vmin] mt-4">
-              Technical Society
-            </p>
-            <p class="uppercase text-[5vmin] md:text-[4vmin]">
-              IIIT <span class="highlight">Allahabad</span>
-            </p>
-          </div>
-          <p class="description uppercase self-end max-w-[180px] md:max-w-md text-right text-[5vmin] md:text-[4vmin]">
-            We are a group of <span class="highlight">highly</span>
-            <span class="highlight">motivated</span> individuals with an
-            <span class="highlight">excellent</span> tech background.
-          </p>
-        </div>
-      </div>
-      <div class="circle-right">
-        <svg width="2400" height="2400" viewBox="0 0 2400 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="1200" cy="1200" r="1198" stroke="var(--text)" stroke-opacity="0.6" stroke-width="4"
-            stroke-dasharray="16 16" />
+  <body>
+    <div>
+      <!-- Logo  -->
+      <div class="logo top-5 md:top-10 left-5 md:left-10 h-14 md:h-20">
+        <svg viewBox="0 0 520 455" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M263.896 58.0392C333.121 57.8522 401.949 63.446 452.448 75.3677C446.292 99.4436 428.323 142.558 411.848 170.866L411.516 171.437L412.156 171.602L452.932 182.115L453.316 182.214L453.5 181.863L453.057 181.631C453.5 181.863 453.5 181.862 453.501 181.862L453.502 181.859L453.507 181.849L453.528 181.809L453.609 181.653C453.643 181.588 453.684 181.509 453.733 181.416C453.789 181.308 453.854 181.181 453.93 181.035C454.211 180.491 454.626 179.685 455.16 178.637C456.229 176.541 457.775 173.476 459.687 169.602C463.512 161.854 468.799 150.867 474.654 137.907C486.361 111.992 500.342 78.1744 509.417 46.601L509.552 46.1294L509.083 45.985C382.113 6.90474 184.177 5.41059 16.4782 45.9769L15.9662 46.1008L16.1166 46.6057C64.4677 208.905 126.434 302.089 263.912 443.305L264.26 443.662L264.619 443.315L264.27 442.956C264.619 443.315 264.619 443.314 264.62 443.313L264.624 443.309L264.642 443.292L264.71 443.225C264.771 443.166 264.862 443.078 264.981 442.961C265.22 442.727 265.576 442.378 266.041 441.918C266.972 440.998 268.344 439.635 270.106 437.861C273.63 434.312 278.718 429.118 284.974 422.532C297.487 409.362 314.673 390.628 333.371 368.372C370.759 323.869 414.219 265.251 438.414 208.862L438.644 208.327L438.08 208.181L437.955 208.665C438.08 208.181 438.08 208.181 438.079 208.18L438.075 208.179L438.06 208.175L438 208.16L437.761 208.098C437.549 208.044 437.235 207.963 436.82 207.856C435.992 207.644 434.766 207.33 433.176 206.925C429.995 206.115 425.357 204.941 419.528 203.486C407.869 200.576 391.442 196.539 372.373 192.033C334.235 183.021 285.519 172.13 243.22 164.618L242.142 164.426L242.703 165.367L271.398 213.427L271.512 213.617L271.73 213.661L271.827 213.17C271.73 213.661 271.73 213.661 271.73 213.661L271.733 213.661L271.741 213.663L271.773 213.669L271.904 213.695C272.019 213.718 272.191 213.753 272.417 213.799C272.87 213.89 273.539 214.025 274.405 214.203C276.139 214.557 278.662 215.079 281.823 215.748C288.145 217.085 297.014 219.009 307.205 221.354C327.393 226.002 352.754 232.304 373.761 238.984C324.328 319.381 303.188 344.956 264.266 386.659C218.367 338.685 173.981 276.192 139.352 217.983C104.805 159.915 80.0037 106.169 73.0727 75.3809C125.075 64.1951 194.665 58.2263 263.896 58.0392Z"
+            fill="#F0F0F9"
+            stroke="#01010F"
+          />
+          <path
+            d="M404.309 104.891L404.47 104.345L403.908 104.255C319.52 90.8404 222.87 89.351 121.629 104.255L121.048 104.34L121.225 104.9C133.51 143.692 158.071 187.677 184.914 227.722C211.759 267.772 240.908 303.913 262.394 327.021L262.742 327.395L263.108 327.039C270.808 319.559 282.713 304.634 293.639 289.739C304.564 274.845 314.553 259.922 318.409 252.437L318.708 251.857L318.07 251.719L276.671 242.782L276.343 242.711L276.153 242.988L276.566 243.271C276.153 242.988 276.153 242.988 276.153 242.988L276.153 242.988L276.152 242.99L276.147 242.997L276.127 243.026L276.05 243.138C275.981 243.237 275.88 243.383 275.75 243.57C275.49 243.945 275.113 244.485 274.647 245.147C273.713 246.471 272.421 248.284 270.985 250.235C268.238 253.968 264.995 258.173 262.735 260.463C250.523 249.922 231.975 225.63 215.839 200.918C207.7 188.453 200.186 175.9 194.422 164.978C188.803 154.332 184.873 145.285 183.622 139.391C230.82 129.137 293.038 130.588 340.296 139.391C339.35 141.97 337.944 145.035 336.736 147.526C336.09 148.858 335.503 150.022 335.078 150.853C334.865 151.268 334.693 151.599 334.574 151.827C334.515 151.941 334.468 152.029 334.437 152.088L334.402 152.155L334.393 152.172L334.391 152.177L334.39 152.178L334.39 152.178L334.069 152.783L334.743 152.904L376.142 160.352L376.475 160.412L376.654 160.125L376.231 159.86C376.654 160.125 376.654 160.125 376.655 160.125L376.655 160.123L376.658 160.119L376.67 160.1L376.717 160.025C376.758 159.959 376.819 159.862 376.898 159.733C377.057 159.477 377.291 159.098 377.591 158.608C378.191 157.629 379.054 156.208 380.109 154.437C382.219 150.895 385.097 145.956 388.166 140.364C394.299 129.192 401.223 115.373 404.309 104.891Z"
+            fill="#F0F0F9"
+            stroke="#01010F"
+          />
         </svg>
       </div>
-      <span class="scroll-motivation text-[5vmin] md:text-[4vmin] bottom-32 md:bottom-12 left-8 md:left-20 scroll_arrow"
-        style="font-size: 70px; ">↓</span>
-    </section>
 
-    <section id="wings">
-      <div class="bg-gradient"></div>
-      <div class="pin-wrap">
-        <div class="inner-wrapper">
-          <svg class="circle" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="600" cy="600" r="600" stroke="var(--text)" stroke-opacity="0.6" stroke-width="4"
-              stroke-dasharray="16 16" />
+      <!-- Bottom Navbar  -->
+      <nav>
+        <ul id="nav-list">
+          <li id="nav-home" class="active">
+            <a href="#home">Home</a>
+          </li>
+          <li id="nav-wings">
+            <a href="#wings">Wings</a>
+          </li>
+          <li id="nav-coordinators">
+            <a href="#coordinators">Coordinators</a>
+          </li>
+          <li id="nav-connect">
+            <a href="#connect">Connect</a>
+          </li>
+          <span id="nav-thumb"></span>
+        </ul>
+      </nav>
+    </div>
 
+    <main>
+      <!-- Landing page  -->
+      <section id="home">
+        <!-- Theme Switch  -->
+        <div class="absolute top-7 md:top-10 right-10">
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <div class="slider">
+              <div class="dark">Dark</div>
+              <div class="light">Light</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="bg-gradient"></div>
+        <div class="content-wrapper p-5 md:p-16">
+          <div class="content flex-col sm:flex-row sm:justify-between">
+            <div class="title my-auto">
+              <h1>GEEK</h1>
+              <h1 class="highlight">HAVEN</h1>
+              <p class="uppercase text-[5vmin] md:text-[4vmin] mt-4"> Technical Society </p>
+              <p class="uppercase text-[5vmin] md:text-[4vmin]"> IIIT <span class="highlight">Allahabad</span> </p>
+            </div>
+            <p class="description uppercase self-end max-w-[180px] md:max-w-md text-right text-[5vmin] md:text-[4vmin]">
+              We are a group of <span class="highlight">highly</span>
+              <span class="highlight">motivated</span> individuals with an <span class="highlight">excellent</span> tech
+              background.
+            </p>
+          </div>
+        </div>
+        <div class="circle-right">
+          <svg width="2400" height="2400" viewBox="0 0 2400 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="1200"
+              cy="1200"
+              r="1198"
+              stroke="var(--text)"
+              stroke-opacity="0.6"
+              stroke-width="4"
+              stroke-dasharray="16 16"
+            />
           </svg>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">Web</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">App</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">Design</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">Blockchain</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">AI/ML</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">Competitive Coding</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">Cyber Security</p>
-          </div>
-          <div class="point">
-            <p class="text-[5vmin] md:text-[4vmin]">FOSS</p>
-          </div>
         </div>
-      </div>
+        <span
+          class="scroll-motivation text-[5vmin] md:text-[4vmin] bottom-32 md:bottom-12 left-8 md:left-20 scroll_arrow"
+          style="font-size: 70px"
+          >↓</span
+        >
+      </section>
 
+      <section id="wings">
+        <div class="bg-gradient"></div>
+        <div class="pin-wrap">
+          <div class="inner-wrapper">
+            <svg class="circle" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                cx="600"
+                cy="600"
+                r="600"
+                stroke="var(--text)"
+                stroke-opacity="0.6"
+                stroke-width="4"
+                stroke-dasharray="16 16"
+              />
+            </svg>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Web</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">App</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Design</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Blockchain</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">AI/ML</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Competitive Coding</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">Cyber Security</p>
+            </div>
+            <div class="point">
+              <p class="text-[5vmin] md:text-[4vmin]">FOSS</p>
+            </div>
+          </div>
+        </div>
 
-      <div class="wing-content">
-        <h2>WINGS</h2>
-        <div class="desc-wrapper">
-          <p class="text-sm md:text-2xl">
-            <!-- web  -->
-            The aim of Web Development Wing is to create awareness about Web Development
-            in our college. We try to achieve this by organizing different workshops and
-            encouraging the juniors to work on exciting projects. During the semester, our
-            wing members work on the different websites hosted for the college and different fests.
-            We try to improve technical culture of our college by collaborating with other technical wings for a better
-            reach.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- app  -->
-            Our aim is to help the students passionate about android technologies turn into
-            technically potent developers capable to take on real world challenges with the
-            help of their skills. We conduct workshops to encourage and help juniors to step into this field,
-            through wing projects we aim to improve collaboration and team work and helping
-            our members learn new technologies and flex their skills.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- desing  -->
-            Bunch of design enthusiasts who love to create things! All the posters, logos,
-            brochures, apps, t-shirts, websites, videos, etc, made in IIITA are designed by us.
-            Everything ranging from the design of official placement brochure to the t-shirt
-            design of Fests, the small family of design Wing does it all.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- blockchain  -->
-            The Blockchain Wing of GeekHaven is committed to promoting the adoption and development of blockchain
-            technology in India. It believes that blockchain has the potential to revolutionize many industries, and it
-            is working to ensure that Indian students have the skills and knowledge they need to be leaders in this
-            field.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- aiMl  -->
-            We improve the AI and ML culture of our college in a multitude of ways.
-            The fundamental method is introducing students to the domains of AI and ML. During the semester,
-            our members provide guidance to those interested in doing projects that incorporate elements of AI.
-            Most of all, we encourage people to participate in competitions and hackathons and build AI projects to win
-            them.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- cc  -->
-            Coding is the link between human instructions and computer understanding.
-            And here at CC wing, we aim to break the shackles of monotonous coding culture to ace various coding
-            confrontations. Our workshops empower talented students to overcome coding challenges and interview hurdles.
-            to be the best. Beyond campus contests, CC Wing hosts global coding competitions,
-            providing essential exposure for success. Elevate your coding journey with us!
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- cyber sec  -->
-            In the ever-evolving realm of cybersecurity, the learning journey is intense due to constant technological
-            advancements.
-            Navigating the dynamic cybersec landscape demands constant learning. We unite enthusiasts to share knowledge
-            and collaborate:
-            1. Workshops for newcomers.
-            2. Sharing experiences, like CTF challenges and vulnerable systems, through insightful blogs.
-            3. Contributing to open-source projects.
-            4. Supporting beginners on Discord.
-          </p>
-          <p class="text-sm md:text-2xl">
-            <!-- Foss  -->
-            FOSS (Free and Open Source Software) Wing’s leading aim is to nurture and encourage opensource development,
-            making students learn about open source workflow
-            Through workshops, we guide them in using essential tools like VCS(Git) and GitHub.The Open Code event
-            offers a platform
-            for students to initiate their collaboration journey by merging their first pull request with an open code
-            base.
-            This emphasizes teamwork, organized software development, and rapid issue awareness.
-          </p>
+        <div class="wing-content">
+          <h2>WINGS</h2>
+          <div class="desc-wrapper">
+            <p class="text-sm md:text-2xl">
+              <!-- web  -->
+              The aim of Web Development Wing is to create awareness about Web Development in our college. We try to
+              achieve this by organizing different workshops and encouraging the juniors to work on exciting projects.
+              During the semester, our wing members work on the different websites hosted for the college and different
+              fests. We try to improve technical culture of our college by collaborating with other technical wings for
+              a better reach.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- app  -->
+              Our aim is to help the students passionate about android technologies turn into technically potent
+              developers capable to take on real world challenges with the help of their skills. We conduct workshops to
+              encourage and help juniors to step into this field, through wing projects we aim to improve collaboration
+              and team work and helping our members learn new technologies and flex their skills.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- desing  -->
+              Bunch of design enthusiasts who love to create things! All the posters, logos, brochures, apps, t-shirts,
+              websites, videos, etc, made in IIITA are designed by us. Everything ranging from the design of official
+              placement brochure to the t-shirt design of Fests, the small family of design Wing does it all.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- blockchain  -->
+              The Blockchain Wing of GeekHaven is committed to promoting the adoption and development of blockchain
+              technology in India. It believes that blockchain has the potential to revolutionize many industries, and
+              it is working to ensure that Indian students have the skills and knowledge they need to be leaders in this
+              field.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- aiMl  -->
+              We improve the AI and ML culture of our college in a multitude of ways. The fundamental method is
+              introducing students to the domains of AI and ML. During the semester, our members provide guidance to
+              those interested in doing projects that incorporate elements of AI. Most of all, we encourage people to
+              participate in competitions and hackathons and build AI projects to win them.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- cc  -->
+              Coding is the link between human instructions and computer understanding. And here at CC wing, we aim to
+              break the shackles of monotonous coding culture to ace various coding confrontations. Our workshops
+              empower talented students to overcome coding challenges and interview hurdles. to be the best. Beyond
+              campus contests, CC Wing hosts global coding competitions, providing essential exposure for success.
+              Elevate your coding journey with us!
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- cyber sec  -->
+              In the ever-evolving realm of cybersecurity, the learning journey is intense due to constant technological
+              advancements. Navigating the dynamic cybersec landscape demands constant learning. We unite enthusiasts to
+              share knowledge and collaborate: 1. Workshops for newcomers. 2. Sharing experiences, like CTF challenges
+              and vulnerable systems, through insightful blogs. 3. Contributing to open-source projects. 4. Supporting
+              beginners on Discord.
+            </p>
+            <p class="text-sm md:text-2xl">
+              <!-- Foss  -->
+              FOSS (Free and Open Source Software) Wing’s leading aim is to nurture and encourage opensource
+              development, making students learn about open source workflow Through workshops, we guide them in using
+              essential tools like VCS(Git) and GitHub.The Open Code event offers a platform for students to initiate
+              their collaboration journey by merging their first pull request with an open code base. This emphasizes
+              teamwork, organized software development, and rapid issue awareness.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="coordinators" class="flex flex-col justify-center h-fit">
-      <div class="rotating-container">
-        <div class="rotate-left flex justify-start">
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
+      <section id="coordinators" class="flex flex-col justify-center h-fit">
+        <div class="rotating-container">
+          <div class="rotate-left flex justify-start">
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+          </div>
+          <div class="rotate-left rotating2 flex justify-around">
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+          </div>
         </div>
-        <div class="rotate-left rotating2 flex justify-around">
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
+        <div class="flex flex-row flex-wrap w-full mx-auto mt-4 mb-8 gap-4 justify-center p-2">
+          <div
+            class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden"
+          >
+            <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg" />
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
+              Anurag Jain
+            </span>
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
+              Overall Coordinator
+            </span>
+            <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
             </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
+          </div>
+          <div
+            class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden"
+          >
+            <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg" />
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
+              Manas Gupta
+            </span>
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
+              Overall Coordinator
+            </span>
+            <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
             </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
+          </div>
+          <div
+            class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden"
+          >
+            <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg" />
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
+              Om Khangat
+            </span>
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
+              Technical Secretary
+            </span>
+            <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
             </div>
-          </span>
+          </div>
+          <div
+            class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden"
+          >
+            <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg" />
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
+              Triloki Pant
+            </span>
+            <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
+              Faculty in Charge
+            </span>
+            <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
+
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
+              <a class="p-4 rounded-full person-color person-profile cursor-pointer">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-row flex-wrap w-full mx-auto mt-4 mb-8 gap-4 justify-center p-2">
+        <div class="rotating-container">
+          <div class="rotate-right flex justify-start">
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+          </div>
+          <div class="rotate-right rotating2 flex justify-around">
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span>
+              <div class="flex flex-nowrap justify-evenly">
+                <span class="rotate-text">Coordinators</span>
+                <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
+                    fill="currentcolor"
+                  />
+                </svg>
+              </div>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="connect" class="relative">
         <div
-          class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden">
-          <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg">
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
-            Anuraj Jain
-          </span>
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
-            Overall Coordinator
-          </span>
-          <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </a>
-
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-twitter fa-xl"></i>
-            </a>
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-        </div>
-        <div
-          class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden">
-          <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg">
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
-            Manas Gupta
-          </span>
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
-            Overall Coordinator
-          </span>
-          <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </a>
-
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-twitter fa-xl"></i>
-            </a>
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-        </div>
-        <div
-          class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden">
-          <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg">
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
-            Om Khangat
-          </span>
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
-            Technical Secretary
-          </span>
-          <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </a>
-
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-twitter fa-xl"></i>
-            </a>
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-        </div>
-        <div
-          class="primary-colors rounded-3xl w-1/2 aspect-video md:basis-1/3 basis-full relative person-container overflow-hidden">
-          <img src="assets/images/cordiImg-1.png" alt="" class="cordiImg">
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute bottom-4 left-4 person-name">
-            Triloki Pant
-          </span>
-          <span class="person-color px-4 py-2 rounded-full text-xl absolute top-4 left-4 person-role">
-            Faculty in Charge
-          </span>
-          <div class="flex absolute flex-col gap-4 top-4 right-4 gapSc">
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-instagram fa-xl"></i>
-            </a>
-
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-twitter fa-xl"></i>
-            </a>
-            <a class="p-4 rounded-full person-color person-profile cursor-pointer">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="rotating-container">
-        <div class="rotate-right flex justify-start">
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-        </div>
-        <div class="rotate-right rotating2 flex justify-around">
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-          <span>
-            <div class="flex flex-nowrap justify-evenly">
-              <span class="rotate-text">Coordinators</span>
-              <svg class="rotate-svg" viewBox="0 0 64 96" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 0L34.2279 12.4139C37.051 28.1397 45.2402 40.4235 55.7241 44.6581L64 48L55.7241 51.3419C45.2402 55.5765 37.051 67.8603 34.2279 83.5861L32 96L29.7721 83.5861C26.949 67.8603 18.7598 55.5765 8.27591 51.3419L0 48L8.27591 44.6581C18.7598 40.4235 26.949 28.1397 29.7721 12.4139L32 0Z"
-                  fill="currentcolor" />
-              </svg>
-            </div>
-          </span>
-        </div>
-      </div>
-    </section>
-    <section id="connect" class="relative">
-      <div
-        class="flex lg:flex-row flex-col h-fit w-full justify-center items-center gap-8 lg:gap-32 flex-wrap absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="flex flex-col gap-4 lg:items-start items-center">
-          <h1 class="text-8xl font-semibold text-[var(--primary)]">
-            CONNECT
-          </h1>
-          <ul>
-            <li class="underline-hover-effect">
-              <a href="#">geekhaven@iiita.ac.in</a>
-            </li>
-          </ul>
-          <button class="blog-button" onclick="window.open('https://medium.com/nybles')">
-            <span>OUR BLOGS</span>
-          </button>
-        </div>
-
-        <div class=" w-2 bg-white h-[600px] lg:block hidden rounded-full">
-        </div>
-        <div class="h-2 w-[80%] rounded-full my-4 bg-white lg:hidden block"></div>
-        <div class="flex flex-row md:gap-32 justify-evenly lg:w-fit w-full">
-          <div class="flex flex-col">
-            <h3 class="connect-heading">SOCIALS</h3>
-            <ul class="flex flex-col">
-              <li class="underline-hover-effect cursor-pointer"><a
-                  href="https://www.linkedin.com/company/geekhaven-iiita/" target="_blank">Linkedin</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a href="https://www.instagram.com/geekhaven_iiita/"
-                  target="_blank">Instagram</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a href="https://www.facebook.com/geekhaveniiita"
-                  target="_blank">Facebook</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a href="https://discord.gg/h3BvHtGuWq"
-                  target="_blank">Discord</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a href="https://twitter.com/geekhaveniiita"
-                  target="_blank">Twitter</a>
+          class="flex lg:flex-row flex-col h-fit w-full justify-center items-center gap-8 lg:gap-32 flex-wrap absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <div class="flex flex-col gap-4 lg:items-start items-center">
+            <h1 class="text-8xl font-semibold text-[var(--primary)]"> CONNECT </h1>
+            <ul>
+              <li class="underline-hover-effect">
+                <a href="#">geekhaven@iiita.ac.in</a>
               </li>
             </ul>
+            <button class="blog-button" onclick="window.open('https://medium.com/nybles')">
+              <span>OUR BLOGS</span>
+            </button>
           </div>
-          <div class="flex flex-col">
-            <h3 class="connect-heading">WORKS</h3>
 
-            <ul class="flex flex-col">
-              <li class="underline-hover-effect cursor-pointer"><a href="https://github.com/GeekHaven"
-                  target="_blank">Github</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a href="https://lnf.iiita.ac.in/"
-                  target="_blank">lnf.iiita.ac.in</a></li>
-              <li class="underline-hover-effect cursor-pointer"><a
-                  href="https://play.google.com/store/apps/dev?id=8009696594405623468" target="_blank">Play Store</a>
-              </li>
-            </ul>
+          <div class="w-2 bg-white h-[600px] lg:block hidden rounded-full"> </div>
+          <div class="h-2 w-[80%] rounded-full my-4 bg-white lg:hidden block"></div>
+          <div class="flex flex-row md:gap-32 justify-evenly lg:w-fit w-full">
+            <div class="flex flex-col">
+              <h3 class="connect-heading">SOCIALS</h3>
+              <ul class="flex flex-col">
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://www.linkedin.com/company/geekhaven-iiita/" target="_blank">Linkedin</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://www.instagram.com/geekhaven_iiita/" target="_blank">Instagram</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://www.facebook.com/geekhaveniiita" target="_blank">Facebook</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://discord.gg/h3BvHtGuWq" target="_blank">Discord</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://twitter.com/geekhaveniiita" target="_blank">Twitter</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="connect-heading">WORKS</h3>
+
+              <ul class="flex flex-col">
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://github.com/GeekHaven" target="_blank">Github</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://lnf.iiita.ac.in/" target="_blank">lnf.iiita.ac.in</a></li
+                >
+                <li class="underline-hover-effect cursor-pointer"
+                  ><a href="https://play.google.com/store/apps/dev?id=8009696594405623468" target="_blank"
+                    >Play Store</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <script src="scripts/index.js" type="module"></script>
-</body>
-
+      </section>
+    </main>
+    <script src="scripts/index.js" type="module"></script>
+  </body>
 </html>

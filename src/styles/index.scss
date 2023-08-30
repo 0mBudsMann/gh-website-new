@@ -11,20 +11,6 @@ section {
     overflow: hidden;
 }
 
-//Removing text selection
-p,
-h1,
-h2,
-h3,
-a,
-.rotate-text {
-    -webkit-user-select: none;
-    /* For Safari */
-    -ms-user-select: none;
-    /* For IE */
-    user-select: none;
-}
-
 .logo {
     position: absolute;
     z-index: 200000000;
@@ -140,7 +126,7 @@ a,
 
 //[Feat]:Added opacity on hover 
 nav {
-    opacity: 0.2;
+    opacity: 0.5;
     transition: 0.35s;
     background-color: var(--primary);
     height: 60px;
@@ -373,7 +359,7 @@ nav:hover {
             text-align: right;
             line-height: 25vmin;
             font-size: 20vmin;
-            color: var(--yellow);
+            color: var(--primary);
         }
 
         .desc-wrapper {
@@ -504,7 +490,7 @@ nav:hover {
 
         }
 
-        .person-container:hover,
+        // .person-container:hover,
         .person-container.active {
             .person-name {
                 transform: translateY(0) rotate(0);

@@ -4,7 +4,9 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-ScrollTrigger.normalizeScroll(true);
+ScrollTrigger.normalizeScroll({
+  type: "touch,wheel,pointer",
+});
 
 const toggleTheme = (e) => {
   const isDark = !e.target.checked;
@@ -22,6 +24,7 @@ const toggleTheme = (e) => {
     root.style.setProperty("--pink", "#E8546B");
     root.style.setProperty("--green", "#41A45E");
   }
+  ScrollTrigger.refresh();
 };
 
 document.getElementById("theme-switch").addEventListener("change", toggleTheme);
@@ -57,31 +60,32 @@ function sectionAnimations() {
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
-      return window
-        .getComputedStyle(document.body)
-        .getPropertyValue("--blue")
-        .trim();
+      return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
     },
     scrollTrigger: {
       trigger: "#home",
       end: "bottom bottom",
       scrub: true,
+      invalidateOnRefresh: true,
     },
   });
 
-  sectionColorTimeLine.to(
+  sectionColorTimeLine.fromTo(
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--yellow")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
+      },
+    },
+    {
+      "--primary": () => {
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
       },
       scrollTrigger: {
         trigger: "#wings",
-        start: "bottom bottom",
-        end: "top bottom",
+        start: "top bottom-=10vh",
+        end: "bottom bottom",
+        invalidateOnRefresh: true,
         scrub: true,
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
@@ -101,15 +105,14 @@ function sectionAnimations() {
   let wingSectionTimeLine = gsap.timeline();
 
   for (let i = 1; i <= 7; i++) {
-    let currDescElement = document.querySelector(
-      `.desc-wrapper p:nth-child(${i})`
-    );
+    let currDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i})`);
 
     wingSectionTimeLine.fromTo(
       currDescElement,
       {
         rotateX: 0,
         y: 0,
+        opacity: 1,
       },
       {
         scrollTrigger: {
@@ -125,20 +128,20 @@ function sectionAnimations() {
           },
         },
         rotateX: 90,
+        opacity: 0,
         y: -currDescElement.clientHeight,
         ease: "power1.inOut",
       }
     );
 
-    let nextDescElement = document.querySelector(
-      `.desc-wrapper p:nth-child(${i + 1})`
-    );
+    let nextDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i + 1})`);
 
     wingSectionTimeLine.fromTo(
       nextDescElement,
       {
         rotateX: -90,
         y: nextDescElement.clientHeight,
+        opacity: 0,
       },
       {
         scrollTrigger: {
@@ -155,17 +158,17 @@ function sectionAnimations() {
         },
         rotateX: 0,
         y: 0,
+        opacity: 1,
         ease: "power1.inOut",
       }
     );
 
     for (let j = i + 2; j <= 8; j++) {
-      let descElement = document.querySelector(
-        `.desc-wrapper p:nth-child(${j})`
-      );
+      let descElement = document.querySelector(`.desc-wrapper p:nth-child(${j})`);
 
       wingSectionTimeLine.set(descElement, {
         rotateX: -90,
+        opacity: 0,
         y: descElement.clientHeight,
       });
     }
@@ -198,23 +201,18 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--yellow")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
       },
     },
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--pink")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
       },
       scrollTrigger: {
         trigger: "#coordinators",
         start: "top bottom-=100px",
         end: "bottom bottom",
+        invalidateOnRefresh: true,
         scrub: true,
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
@@ -235,8 +233,8 @@ function sectionAnimations() {
     gsap.to(person, {
       scrollTrigger: {
         trigger: person,
-        start: "top bottom-=10svh",
-        end: "+=80svh",
+        start: "bottom bottom",
+        end: "top top",
         toggleClass: "active",
       },
     });
@@ -246,23 +244,18 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--pink")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
       },
     },
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--green")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--green").trim();
       },
       scrollTrigger: {
         trigger: "#connect",
         start: "top bottom-=100px",
         end: "bottom bottom",
+        invalidateOnRefresh: true,
         scrub: true,
         onEnter: () => {
           document.querySelector(".active").classList.remove("active");
@@ -298,42 +291,7 @@ function onLoad() {
 }
 
 window.addEventListener("load", onLoad);
-window.addEventListener("refresh", () => {
-  ScrollTrigger.clearScrollMemory();
-  window.history.scrollRestoration = "manual";
-});
 
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
-
-
-// //Reducing opacity on scroll
-// function makeScrollBarTransparent() {
-//   var navElement = document.querySelector("nav");
-  
-//   //To get the maximum scrollY
-//   const totalPageHeight = Math.max(
-//     document.body.scrollHeight,
-//     document.body.offsetHeight,
-//     document.documentElement.clientHeight,
-//     document.documentElement.scrollHeight,
-//     document.documentElement.offsetHeight
-//   );
-
-//   // Get the height of the viewport
-//   const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-
-//   // Calculate the maximum scroll value
-//   const maxScrollY = totalPageHeight - viewportHeight;
-
-  
-//   if (this.scrollY > maxScrollY*0.05 && this.scrollY < maxScrollY * 0.915)
-//     navElement.style.opacity = .2;
-
-//   else
-//     navElement.style.opacity = 1;
-
-// }
-
-// window.addEventListener("scroll", makeScrollBarTransparent, false);

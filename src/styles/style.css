@@ -69,16 +69,28 @@ h5,
 h6 {
     font-family: 'Tusker Grotesk', sans-serif;
 }
-.scroll_arrow{
+
+.scroll_arrow {
     display: block;
     opacity: 50%;
     font-size: 100px;
     user-select: none;
 }
-.scroll_arrow:hover{
+
+.scroll_arrow:hover {
     opacity: 100%;
-    
-   
-   
-    
+}
+
+/* Removing text selection */
+p,
+h1,
+h2,
+h3,
+a,
+.rotate-text {
+    -webkit-user-select: none;
+    /* For Safari */
+    -ms-user-select: none;
+    /* For IE */
+    user-select: none;
 }
