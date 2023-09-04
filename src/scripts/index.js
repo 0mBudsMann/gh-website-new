@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -288,6 +289,22 @@ function onLoad() {
   sectionHeight = document.getElementById("home").clientHeight;
   navResetThumb();
   sectionAnimations();
+  
+  //Title animation
+  const split1 = new SplitType('.geek');
+  const split2 = new SplitType('.haven');
+
+  gsap.to('.char', {
+    y: 0,
+    stagger: 0.2,
+    delay: 0,
+    rotate: 0,
+    opacity: 1,
+    transformOrigin: 'top left',
+    ease: 'back.out(1.7)',
+    duration: 0.8,
+  })
+
 }
 
 window.addEventListener("load", onLoad);
