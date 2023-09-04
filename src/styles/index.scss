@@ -436,6 +436,7 @@ nav:hover {
             position: absolute;
             white-space: nowrap;
             animation: rotating-left 30s linear infinite;
+            animation-delay: -30s;
         }
 
         .rotate-right {
@@ -445,21 +446,23 @@ nav:hover {
             position: absolute;
             white-space: nowrap;
             animation: rotating-right 30s linear infinite;
+            animation-delay: -30s;
         }
 
         .rotating2 {
-            animation-delay: 15s;
+            animation-delay: -15s;
         }
+        
     }
 
     //Resolved the padding issue
-    @media all and (max-width: 748px) {
+    @media all and (max-width: 1048px) {
         .cordiImg {
             //Changing the height and width of the image
             height: 98%;
             width: 60%;
             //Reduced the translate value
-            transform: translateX(26vmin) translateY(2vmin);
+            transform: translateX(15vmin) translateY(2vmin);
         }
 
         .gapSc {
@@ -500,7 +503,7 @@ nav:hover {
             .cordiImg {
                 position: absolute;
                 height: 115%;
-                width: 65%;
+                width: auto;
                 transform: translateX(30%) translateY(-10%);
                 transition: all ease-in 0.3s;
                 filter: grayscale(100%);
@@ -510,6 +513,19 @@ nav:hover {
                 filter: grayscale(0);
             }
 
+
+        }
+        @media screen and (max-width: 1000px) {
+            .cordiImg {
+                position: absolute;
+                height: 115%;
+                width: 65%;
+                transform: translateX(30%) translateY(-10%);
+                transition: all ease-in 0.3s;
+                
+            }
+
+           
 
         }
 
@@ -593,6 +609,7 @@ nav:hover {
         font-size: 36px;
     }
 
+    // add a cool effect to under line of the text
     a.underline-hover-effect {
         text-decoration: none;
         color: inherit;
@@ -608,17 +625,42 @@ nav:hover {
 
     .underline-hover-effect::before {
         content: "";
+        display: block;
         position: absolute;
+        bottom: 0em;
         left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--primary);
-        transition: width 0.25s ease-out;
+        right: 0;
+        transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        border-bottom: 2px solid var(--primary);
+        transition-delay: 0s;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .underline-hover-effect::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0em;
+        left: 0;
+        right: 0;
+        transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        border-bottom: 2px solid var(--primary);
+        transition-delay: 0.25s;
+        transform-origin: right;
+    }
+
+    .underline-hover-effect:hover {
+        text-decoration: none;
+    }
+
+    .underline-hover-effect:hover::after {
+        transition-delay: 0s;
+        transform: scaleX(0);
     }
 
     .underline-hover-effect:hover::before {
-        width: 100%;
+        transition-delay: 0.25s;
+        transform: scaleX(1);
     }
 
     .connect-heading {
