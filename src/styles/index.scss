@@ -608,7 +608,7 @@ nav:hover {
         left: 0;
         right: 0;
         transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-        border-bottom: 3px solid #b188ff;
+        border-bottom: 2px solid var(--primary);
         transition-delay: 0s;
         transform: scaleX(0);
         transform-origin: left;
@@ -621,7 +621,7 @@ nav:hover {
         left: 0;
         right: 0;
         transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-        border-bottom: 3px solid #b188ff;
+        border-bottom: 2px solid var(--primary);
         transition-delay: 0.25s;
         transform-origin: right;
     }
