@@ -4,6 +4,34 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+gsap.fromTo(
+  ".loading-page",
+  { opacity: 1 },
+  {
+   
+    
+    duration: 1.5,
+    delay: 3.5,
+  }
+);
+
+gsap.fromTo(
+  ".logo-name",
+  {
+    y: 50,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 2,
+    delay: 0.5,
+  }
+);
+
+
+
+
 ScrollTrigger.normalizeScroll({
   type: "touch,wheel,pointer",
 });
@@ -321,34 +349,8 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("load", onLoad);
 
- 
+ Z
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
-
-
-gsap.fromTo(
-  ".loading-page",
-  { opacity: 1 },
-  {
-   
-    
-    duration: 1.5,
-    delay: 3.5,
-  }
-);
-
-gsap.fromTo(
-  ".logo-name",
-  {
-    y: 50,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 2,
-    delay: 0.5,
-  }
-);
 
