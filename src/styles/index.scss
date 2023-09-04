@@ -570,6 +570,7 @@ nav:hover {
         font-size: 36px;
     }
 
+    // add a cool effect to under line of the text
     a.underline-hover-effect {
         text-decoration: none;
         color: inherit;
@@ -585,17 +586,42 @@ nav:hover {
 
     .underline-hover-effect::before {
         content: "";
+        display: block;
         position: absolute;
+        bottom: 0em;
         left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--primary);
-        transition: width 0.25s ease-out;
+        right: 0;
+        transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        border-bottom: 3px solid #b188ff;
+        transition-delay: 0s;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .underline-hover-effect::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0em;
+        left: 0;
+        right: 0;
+        transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        border-bottom: 3px solid #b188ff;
+        transition-delay: 0.25s;
+        transform-origin: right;
+    }
+
+    .underline-hover-effect:hover {
+        text-decoration: none;
+    }
+
+    .underline-hover-effect:hover::after {
+        transition-delay: 0s;
+        transform: scaleX(0);
     }
 
     .underline-hover-effect:hover::before {
-        width: 100%;
+        transition-delay: 0.25s;
+        transform: scaleX(1);
     }
 
     .connect-heading {
