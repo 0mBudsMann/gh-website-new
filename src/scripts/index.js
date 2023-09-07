@@ -4,6 +4,34 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+gsap.fromTo(
+  ".loading-page",
+  { opacity: 1 },
+  {
+   
+    
+    duration: 1.5,
+    delay: 3.5,
+  }
+);
+
+gsap.fromTo(
+  ".logo-name",
+  {
+    y: 50,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 2,
+    delay: 0.5,
+  }
+);
+
+
+
+
 ScrollTrigger.normalizeScroll({
   type: "touch,wheel,pointer",
 });
@@ -285,9 +313,29 @@ function sectionAnimations() {
 }
 
 function onLoad() {
+  // Get a reference to the loader element
+  const loader = document.querySelector(".loading-page");
+
+  // Hide the loader initially
+  loader.style.display = "none";
+
   sectionHeight = document.getElementById("home").clientHeight;
   navResetThumb();
+
+  // Show the loader
+  loader.style.display = "flex";
+
   sectionAnimations();
+
+  // After your animations are complete, hide the loader
+  gsap.to(loader, {
+    opacity: 0,
+    duration: 0.3,
+    delay: 3.5,
+    onComplete: () => {
+      loader.style.display = "none";
+    },
+  });
 }
 
 window.addEventListener("load", onLoad);
@@ -295,3 +343,14 @@ window.addEventListener("load", onLoad);
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
+
+// Rest of your GSAP animations
+
+
+window.addEventListener("load", onLoad);
+
+ Z
+window.addEventListener("resize", () => {
+  sectionHeight = document.getElementById("home").clientHeight;
+});
+
