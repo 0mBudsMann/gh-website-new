@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -89,10 +88,7 @@ function sectionAnimations() {
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
-      return window
-        .getComputedStyle(document.body)
-        .getPropertyValue("--blue")
-        .trim();
+      return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
     },
     scrollTrigger: {
       trigger: "#home",
@@ -106,18 +102,12 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--blue")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
       },
     },
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--yellow")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
       },
       scrollTrigger: {
         trigger: "#wings",
@@ -143,9 +133,7 @@ function sectionAnimations() {
   let wingSectionTimeLine = gsap.timeline();
 
   for (let i = 1; i <= 7; i++) {
-    let currDescElement = document.querySelector(
-      `.desc-wrapper p:nth-child(${i})`
-    );
+    let currDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i})`);
 
     wingSectionTimeLine.fromTo(
       currDescElement,
@@ -174,9 +162,7 @@ function sectionAnimations() {
       }
     );
 
-    let nextDescElement = document.querySelector(
-      `.desc-wrapper p:nth-child(${i + 1})`
-    );
+    let nextDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i + 1})`);
 
     wingSectionTimeLine.fromTo(
       nextDescElement,
@@ -206,9 +192,7 @@ function sectionAnimations() {
     );
 
     for (let j = i + 2; j <= 8; j++) {
-      let descElement = document.querySelector(
-        `.desc-wrapper p:nth-child(${j})`
-      );
+      let descElement = document.querySelector(`.desc-wrapper p:nth-child(${j})`);
 
       wingSectionTimeLine.set(descElement, {
         rotateX: -90,
@@ -245,18 +229,12 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--yellow")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
       },
     },
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--pink")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
       },
       scrollTrigger: {
         trigger: "#coordinators",
@@ -294,18 +272,12 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--pink")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
       },
     },
     {
       "--primary": () => {
-        return window
-          .getComputedStyle(document.body)
-          .getPropertyValue("--green")
-          .trim();
+        return window.getComputedStyle(document.body).getPropertyValue("--green").trim();
       },
       scrollTrigger: {
         trigger: "#connect",
@@ -355,7 +327,6 @@ function onLoad() {
 
   sectionAnimations();
 
-<<<<<<< HEAD
   // After your animations are complete, hide the loader
   gsap.to(loader, {
     opacity: 0,
@@ -365,32 +336,6 @@ function onLoad() {
       loader.style.display = "none";
     },
   });
-=======
-  //Title animation
-  const split1 = new SplitType(".geek");
-  const split2 = new SplitType(".haven");
-  gsap.fromTo(
-    ".char",
-    {
-      skewY: 10,
-      delay: 1,
-      rotateZ: 5,
-    },
-    {
-      y: 0,
-      stagger: {
-        amount: 0.3,
-      },
-      rotateZ: 0,
-      skewY: 0,
-      delay: 1,
-      opacity: 1,
-      transformOrigin: "top left",
-      ease: "power4.out",
-      duration: 0.8,
-    }
-  );
->>>>>>> 945f2ed5f5b84c483895ee6c71090b6e3a044518
 }
 
 window.addEventListener("load", onLoad);
