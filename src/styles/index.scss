@@ -25,29 +25,6 @@ section {
     }
 }
 
-
-.header-main-wrapper {
-    overflow: hidden;
-}
-
-.header-wrapper {
-    opacity: 1;
-    overflow: hidden;
-    transition: transform 0.8s ease-in, opacity 0.8s ease;
-    margin: 2px;
-}
-
-.header-wrapper h1 {
-    letter-spacing: 0.15rem;
-}
-
-.char {
-    opacity: 0;
-    // transform: rotateZ(20deg) translateY(10%) translateX(10%);
-    // transition: transform 0.5s, opacity 0.5s ease;
-}
-
-
 .theme-switch {
     z-index: 200000000;
     position: relative;
@@ -146,10 +123,147 @@ section {
         }
     }
 }
+.loading-page .hidden{
+    opacity: 0;
+    pointer-events:none
+}
 
+
+.loading-page {
+    position: absolute;
+    z-index: 200000000111;
+    top: 0;
+    left: 0;
+    /* background: linear-gradient(to right, #01010f, #01010f, #01010f); */
+  background: #01010f;
+  opacity: 90;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  #svg-wo{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+  }
+  #svg {
+    height: 150px;
+    width: 150px;
+    
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 8s ease;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 4500;
+      stroke: #232B54;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke: #ffffff;
+      stroke-width: 3px;
+      fill: #6f86eb;
+    }
+  }
+  
+  .name-container {
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .logo-name {
+    color: #f0f0f0;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+  
+    margin-left: 20px;
+  
+  }
+  
+  .logo-name span{
+    color: #6f86eb;
+  
+  }
+  
+  
+  .dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    animation: dot-typing 1.5s infinite linear;
+  }
+  
+  @keyframes dot-typing {
+    0% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  
+    16.667% {
+      box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  
+    33.333% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  
+    50% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  
+    66.667% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  
+    83.333% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px -10px 0 0 #9880ff;
+    }
+  
+    100% {
+      box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+        10014px 0 0 0 #9880ff;
+    }
+  }
+  
+  
+  .load{
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: right;
+  }
+  
+  @media screen and (max-width:600px){
+    .load{
+      justify-content: center;
+    }
+  }
+  
 //[Feat]:Added opacity on hover 
 nav {
-    opacity: 0.5;
+    opacity: 1;
     transition: 0.35s;
     background-color: var(--primary);
     height: 60px;
@@ -682,6 +796,9 @@ nav:hover {
         li {
             font-size: 1rem;
         }
+
+
+
     }
 }
 
