@@ -11,6 +11,30 @@ section {
     overflow: hidden;
 }
 
+
+
+.header-main-wrapper {
+    overflow: hidden;
+}
+
+.header-wrapper {
+    opacity: 1;
+    overflow: hidden;
+    transition: transform 0.8s ease-in, opacity 0.8s ease;
+    margin: 2px;
+}
+
+.header-wrapper h1 {
+    letter-spacing: 0.15rem;
+}
+
+.char {
+    opacity: 0;
+    // transform: rotateZ(20deg) translateY(10%) translateX(10%);
+    // transition: transform 0.5s, opacity 0.5s ease;
+}
+
+
 .logo {
     position: absolute;
     z-index: 200000000;
