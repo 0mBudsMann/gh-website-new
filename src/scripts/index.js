@@ -8,8 +8,6 @@ gsap.fromTo(
   ".loading-page",
   { opacity: 1 },
   {
-   
-    
     duration: 1.5,
     delay: 3.5,
   }
@@ -28,9 +26,6 @@ gsap.fromTo(
     delay: 0.5,
   }
 );
-
-
-
 
 ScrollTrigger.normalizeScroll({
   type: "touch,wheel,pointer",
@@ -88,7 +83,10 @@ function sectionAnimations() {
 
   sectionColorTimeLine.to(":root", {
     "--primary": () => {
-      return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
+      return window
+        .getComputedStyle(document.body)
+        .getPropertyValue("--blue")
+        .trim();
     },
     scrollTrigger: {
       trigger: "#home",
@@ -102,12 +100,18 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--blue").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--blue")
+          .trim();
       },
     },
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--yellow")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#wings",
@@ -133,7 +137,9 @@ function sectionAnimations() {
   let wingSectionTimeLine = gsap.timeline();
 
   for (let i = 1; i <= 7; i++) {
-    let currDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i})`);
+    let currDescElement = document.querySelector(
+      `.desc-wrapper p:nth-child(${i})`
+    );
 
     wingSectionTimeLine.fromTo(
       currDescElement,
@@ -162,7 +168,9 @@ function sectionAnimations() {
       }
     );
 
-    let nextDescElement = document.querySelector(`.desc-wrapper p:nth-child(${i + 1})`);
+    let nextDescElement = document.querySelector(
+      `.desc-wrapper p:nth-child(${i + 1})`
+    );
 
     wingSectionTimeLine.fromTo(
       nextDescElement,
@@ -192,7 +200,9 @@ function sectionAnimations() {
     );
 
     for (let j = i + 2; j <= 8; j++) {
-      let descElement = document.querySelector(`.desc-wrapper p:nth-child(${j})`);
+      let descElement = document.querySelector(
+        `.desc-wrapper p:nth-child(${j})`
+      );
 
       wingSectionTimeLine.set(descElement, {
         rotateX: -90,
@@ -229,12 +239,18 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--yellow").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--yellow")
+          .trim();
       },
     },
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--pink")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#coordinators",
@@ -272,12 +288,18 @@ function sectionAnimations() {
     ":root",
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--pink").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--pink")
+          .trim();
       },
     },
     {
       "--primary": () => {
-        return window.getComputedStyle(document.body).getPropertyValue("--green").trim();
+        return window
+          .getComputedStyle(document.body)
+          .getPropertyValue("--green")
+          .trim();
       },
       scrollTrigger: {
         trigger: "#connect",
@@ -320,12 +342,9 @@ function onLoad() {
   loader.style.display = "none";
 
   sectionHeight = document.getElementById("home").clientHeight;
-  navResetThumb();
 
   // Show the loader
   loader.style.display = "flex";
-
-  sectionAnimations();
 
   // After your animations are complete, hide the loader
   gsap.to(loader, {
@@ -336,7 +355,11 @@ function onLoad() {
       loader.style.display = "none";
     },
   });
+
+  navResetThumb();
 }
+
+sectionAnimations();
 
 window.addEventListener("load", onLoad);
 
@@ -346,11 +369,9 @@ window.addEventListener("resize", () => {
 
 // Rest of your GSAP animations
 
-
 window.addEventListener("load", onLoad);
 
- Z
+Z;
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
-
