@@ -94,3 +94,8 @@ a,
     /* For IE */
     user-select: none;
 }
+.person-color {
+                background-color: #FDFDFF;
+                color: #000000;
+            }
+
