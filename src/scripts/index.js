@@ -200,7 +200,7 @@ function sectionAnimations() {
       }
     );
 
-    for (let j = i + 2; j <= 8; j++) {
+    for (let j = i + 1; j <= 8; j++) {
       let descElement = document.querySelector(
         `.desc-wrapper p:nth-child(${j})`
       );
@@ -386,32 +386,32 @@ function onLoad() {
     }
   );
 
-  gsap.fromTo('.four', 
-  {
-    rotateX: 90,
-  }, 
-  {
-    rotateX: 0,
-    translateZ: 0,
-    stagger: 0.1,
-    opacity: 1,
-    delay: 4.92,
-    duration: .5
-  })
+  gsap.fromTo('.four',
+    {
+      rotateX: 90,
+    },
+    {
+      rotateX: 0,
+      translateZ: 0,
+      stagger: 0.1,
+      opacity: 1,
+      delay: 4.92,
+      duration: .5
+    })
 
   gsap.fromTo('.content-wrapper .title .one .two',
-  {
-    rotateX: 90,
-  },
-   {
-   
-    rotateX: 0,
-    translateZ: 0,
-    stagger: 0.1,
-    opacity: 1,
-    delay: 4.18,
-    duration: .5
-  })
+    {
+      rotateX: 90,
+    },
+    {
+
+      rotateX: 0,
+      translateZ: 0,
+      stagger: 0.1,
+      opacity: 1,
+      delay: 4.18,
+      duration: .5
+    })
 }
 
 
