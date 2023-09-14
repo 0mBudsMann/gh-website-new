@@ -612,27 +612,27 @@ nav:hover {
         }
     }
 
-    @media screen and (min-width: 1024px) {
-        .person-container {
-            .person-name {
-                transition: all ease-in-out 0.5s;
-                transform: translateY(200%) rotate(20deg);
-            }
-
-            .person-role {
-                transition: all ease-in-out 0.5s;
-                transform: translateY(-200%);
-            }
-
-            @for $i from 1 through 100 {
-                .person-profile:nth-child(#{$i}n) {
-                    transform: translateX(200%);
-                    transition: all ease-in-out 0.25s;
-                    transition-delay: #{$i * 0.05s};
-                }
-            }
+    .person-container {
+        .person-name {
+            transition: all ease-in-out 0.5s;
+            transform: translateY(200%) rotate(20deg);
         }
 
+        .person-role {
+            transition: all ease-in-out 0.5s;
+            transform: translateY(-200%);
+        }
+
+        @for $i from 1 through 100 {
+            .person-profile:nth-child(#{$i}n) {
+                transform: translateX(200%);
+                transition: all ease-in-out 0.25s;
+                transition-delay: #{$i * 0.05s};
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
         .person-container {
             .cordiImg {
                 position: absolute;
@@ -662,31 +662,28 @@ nav:hover {
            
 
         }
+    }
 
-        // .person-container:hover,
-        .person-container.active {
-            .person-name {
-                transform: translateY(0) rotate(0);
-            }
+    .person-container.active {
+        .person-name {
+            transform: translateY(0) rotate(0);
+        }
 
-            .person-role {
-                transform: translateY(0) rotate(0);
-            }
+        .person-role {
+            transform: translateY(0) rotate(0);
+        }
 
-            .person-color {
-                background-color: #FDFDFF;
-                color: #000000;
-            }
+        .person-color {
+            background-color: #FDFDFF;
+            color: #000000;
+        }
 
-            @for $i from 1 through 10 {
-                .person-profile:nth-child(#{$i}n) {
-                    transform: translateX(0);
-                }
+        @for $i from 1 through 10 {
+            .person-profile:nth-child(#{$i}n) {
+                transform: translateX(0);
             }
         }
     }
-
-
 
 
     @keyframes rotating-left {
