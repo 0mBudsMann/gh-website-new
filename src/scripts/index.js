@@ -338,7 +338,10 @@ function sectionAnimations() {
 
 function onLoad() {
   // Get a reference to the loader element
-
+  //Disable scroll when loading
+  const main=document.querySelector('.main');
+  main.style.overflow="hidden";
+  console.log(main.style.overflow);
   const loader = document.querySelector(".loading-page");
 
   // Hide the loader initially
@@ -356,6 +359,8 @@ function onLoad() {
     delay: 3.5,
     onComplete: () => {
       loader.style.display = "none";
+      //Enable Scroll on completion
+      main.style.overflow="";
     },
   });
 
