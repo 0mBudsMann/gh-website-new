@@ -335,8 +335,10 @@ function sectionAnimations() {
   });
 }
 
+
 function onLoad() {
   // Get a reference to the loader element
+
   const loader = document.querySelector(".loading-page");
 
   // Hide the loader initially
@@ -356,6 +358,7 @@ function onLoad() {
       loader.style.display = "none";
     },
   });
+
 
   navResetThumb();
   //Title animation
@@ -382,7 +385,35 @@ function onLoad() {
       duration: 0.8,
     }
   );
+
+  gsap.fromTo('.four', 
+  {
+    rotateX: 90,
+  }, 
+  {
+    rotateX: 0,
+    translateZ: 0,
+    stagger: 0.1,
+    opacity: 1,
+    delay: 4.92,
+    duration: .5
+  })
+
+  gsap.fromTo('.content-wrapper .title .one .two',
+  {
+    rotateX: 90,
+  },
+   {
+   
+    rotateX: 0,
+    translateZ: 0,
+    stagger: 0.1,
+    opacity: 1,
+    delay: 4.18,
+    duration: .5
+  })
 }
+
 
 sectionAnimations();
 
@@ -393,6 +424,7 @@ window.addEventListener("resize", () => {
 });
 
 // Rest of your GSAP animations
+
 
 window.addEventListener("load", onLoad);
 window.addEventListener("resize", () => {

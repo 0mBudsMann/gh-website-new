@@ -412,6 +412,35 @@ nav:hover {
             font-family: 'Bebas Neue';
             margin-left: 0.25rem;
         }
+        .one {
+            font-family: 'Bebas Neue';
+            margin-left: 0.25rem;
+            transform-style: preserve-3d;
+            display: flex;
+            // font-size: 19px;
+            gap: 3%;
+        }
+        .two {
+            // color: #fdfdff;
+            transform: rotateX(60deg) translateZ(-10px);
+            opacity: 0;
+            transition: transform linear .5s;
+        }
+        .three {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5%;
+            font-family: 'Bebas Neue';
+            margin-left: 0.25rem;
+            transform-style: preserve-3d;
+            // font-size: 19px;
+            line-break: strict;
+        }
+        .four {
+            transform: rotateX(60deg) translateZ(-10px);
+            opacity: 0;
+            transition: transform linear .5s;
+        }
     }
 
     &::after {
