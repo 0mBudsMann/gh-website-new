@@ -339,8 +339,8 @@ function sectionAnimations() {
 function onLoad() {
   // Get a reference to the loader element
   //Disable scroll when loading
-  const main=document.querySelector('.main');
-  main.style.overflow="hidden";
+  const main = document.querySelector('.main');
+  main.style.overflow = "hidden";
   console.log(main.style.overflow);
   const loader = document.querySelector(".loading-page");
 
@@ -360,7 +360,7 @@ function onLoad() {
     onComplete: () => {
       loader.style.display = "none";
       //Enable Scroll on completion
-      main.style.overflow="";
+      main.style.overflow = "";
     },
   });
 
@@ -391,7 +391,7 @@ function onLoad() {
     }
   );
 
-  gsap.fromTo('.four',
+  gsap.fromTo('.content-wrapper .title .one .two',
     {
       rotateX: 90,
     },
@@ -404,17 +404,16 @@ function onLoad() {
       duration: .5
     })
 
-  gsap.fromTo('.content-wrapper .title .one .two',
+  gsap.fromTo('.four',
     {
       rotateX: 90,
     },
     {
-
       rotateX: 0,
       translateZ: 0,
       stagger: 0.1,
       opacity: 1,
-      delay: 4.18,
+      delay: 5.72,
       duration: .5
     })
 }
@@ -435,3 +434,56 @@ window.addEventListener("load", onLoad);
 window.addEventListener("resize", () => {
   sectionHeight = document.getElementById("home").clientHeight;
 });
+
+
+//For Wings text animation
+// // Function to handle the intersection observer callback
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // The div has entered the viewport
+      const text = entry.target;
+      animateWingsTitle(text);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Use the viewport as the root
+  threshold: 1, // Trigger when 50% of the div is in the viewport
+});
+
+const wingsHeading = document.getElementById('wing-header');
+
+// Observing the wings heading
+observer.observe(wingsHeading);
+
+// Animate Wings function
+function animateWingsTitle(e) {
+  const split1 = new SplitType(document.getElementById(e.id), { charClass: "char1" });
+  console.log("he");
+  gsap.fromTo(
+    ".char1",
+    {
+      skewY: 10,
+      delay: 0,
+      rotateZ: 5,
+    },
+    {
+      y: 0,
+      stagger: {
+        amount: 0.3,
+      },
+      rotateZ: 0,
+      skewY: 0,
+      delay: 0.3,
+      opacity: 1,
+      transformOrigin: "top left",
+      ease: "power4.out",
+      duration: 0.8,
+    }
+  );
+}
+
