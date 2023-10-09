@@ -59,6 +59,19 @@ body {
     color: var(--text);
     font-family: 'Oswald', sans-serif;
     height: 100%;
+
+    /* Disable text selection */
+
+    /* Chrome all / Safari all */
+    -webkit-user-select: none;
+
+    /* Firefox all */
+    -moz-user-select: none;
+
+    /* IE 10+ */
+    -ms-user-select: none;
+
+    user-select: none;
 }
 
 h1,
@@ -94,8 +107,8 @@ a,
     /* For IE */
     user-select: none;
 }
-.person-color {
-                background-color: #FDFDFF;
-                color: #000000;
-            }
 
+.person-color {
+    background-color: #FDFDFF;
+    color: #000000;
+}
