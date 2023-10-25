@@ -618,6 +618,21 @@ nav:hover {
       //Reduced the translate value
       transform: translateX(15vmin) translateY(2vmin);
     }
+    #anurag_img{
+      height: 150%;
+      width:100%;
+      transform: translateX(6vmin) translateY(-8vmin);
+    }
+    #manas_img{
+      height: 130%;
+      width:70%;
+      transform: translateX(20vmin) translateY(-7vmin);
+    }
+    #om_img{
+      height: 160%;
+      width:100%;
+      transform: translateX(10vmin) translateY(-8.9vmin);
+    }
 
     .gapSc {
       gap: 0.1rem;
@@ -665,6 +680,22 @@ nav:hover {
 
       .cordiImg:hover {
         filter: grayscale(0);
+      }
+
+      #anurag_img{
+        height: 150%;
+        width:100%;
+        transform: translateX(3vmin) translateY(-8vmin);
+      }
+      #manas_img{
+        height: 130%;
+        width:70%;
+        transform: translateX(12vmin) translateY(-8vmin);
+      }
+      #om_img{
+        height: 160%;
+        width:100%;
+        transform: translateX(10vmin) translateY(-8.9vmin);
       }
     }
     @media screen and (max-width: 1000px) {
