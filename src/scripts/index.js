@@ -205,6 +205,8 @@ function sectionAnimations() {
         `.desc-wrapper p:nth-child(${j})`
       );
 
+      
+
       wingSectionTimeLine.set(descElement, {
         rotateX: -90,
         opacity: 0,
